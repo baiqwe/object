@@ -7,17 +7,146 @@
       "en": {
         "name": "Animals",
         "shortName": "Animals",
-        "description": "Spin up a fresh animal prompt whenever you need a drawing cue, a classroom icebreaker, or a game night wildcard."
+        "description": "Spin up a fresh animal prompt whenever you need a drawing cue, a classroom icebreaker, or a game night wildcard.",
+        "seo": {
+          "introTitle": "A random animal generator works best when the page feels like a real prompt library.",
+          "introBody": "This category page is focused on random animals instead of generic object noise. That matters because people landing here usually want animal prompts for drawing, games, lesson plans, writing exercises, or quick warmups. A tighter category page improves usability, gives the page more unique text for indexing, and makes it easier to expand into richer animal content over time.",
+          "reasonsTitle": "Why this animal page deserves its own URL",
+          "reasons": [
+            {
+              "title": "Stronger search intent match",
+              "body": "Someone searching for a random animal generator should land on a page built specifically around animals, not a broad homepage with mixed object types."
+            },
+            {
+              "title": "Better prompt quality",
+              "body": "A focused animal pool creates results that are easier to use in drawing prompts, charades, and classroom games because the theme stays coherent."
+            },
+            {
+              "title": "More room for topical depth",
+              "body": "Animal-specific copy, examples, FAQs, and future subcategories can all reinforce the page as a distinct destination instead of a template duplicate."
+            }
+          ],
+          "useCasesTitle": "Popular ways to use random animal prompts",
+          "useCases": [
+            "Drawing prompts",
+            "Animal charades",
+            "Kids classroom games",
+            "Creative writing exercises",
+            "ESL vocabulary warmups",
+            "Storytelling rounds"
+          ],
+          "faqTitle": "Animal generator FAQ",
+          "faqs": [
+            {
+              "question": "What can I use a random animal generator for?",
+              "answer": "It is useful for drawing ideas, classroom prompts, improv games, party activities, and creative writing. Animal prompts are easy to visualize and work well for all ages."
+            },
+            {
+              "question": "Can I generate multiple animals at once?",
+              "answer": "Yes. You can enter a custom quantity and decide whether repeated results are allowed, which makes the page useful for both quick prompts and longer activity lists."
+            },
+            {
+              "question": "Why not keep animals on the main random object page only?",
+              "answer": "Because animal intent is specific. A dedicated random animal generator page gives users cleaner results and gives search engines a more relevant page to rank."
+            }
+          ]
+        }
       },
       "zh": {
         "name": "动物",
         "shortName": "动物",
-        "description": "快速抽一个动物灵感，适合绘画、课堂互动和游戏破冰。"
+        "description": "快速抽一个动物灵感，适合绘画、课堂互动和游戏破冰。",
+        "seo": {
+          "introTitle": "随机动物页应该像一个可直接使用的灵感页，而不是模板的副本。",
+          "introBody": "来到这个页面的用户，通常不是随便想看一个词，而是明确需要动物类提示词。可能是为了画画、课堂互动、你演我猜、写故事，或者给孩子做热身游戏。把动物独立成页，不只是为了关键词匹配，也是为了让页面内容真正围绕“动物提示”展开。",
+          "reasonsTitle": "为什么动物页值得单独存在",
+          "reasons": [
+            {
+              "title": "更贴近搜索意图",
+              "body": "搜随机动物的人，理应直接进入动物页，而不是先进入混合型首页再自己筛。"
+            },
+            {
+              "title": "结果更好用",
+              "body": "聚焦动物之后，抽出来的内容更适合绘画、游戏和课堂场景，不会被杂项物品打断主题。"
+            },
+            {
+              "title": "更容易做深",
+              "body": "独立页面可以继续扩展更多动物文本、例子、FAQ 和长尾子类，不容易沦为模板页。"
+            }
+          ],
+          "useCasesTitle": "随机动物最常见的使用场景",
+          "useCases": [
+            "绘画提示",
+            "动物版你演我猜",
+            "少儿课堂游戏",
+            "创意写作练习",
+            "英语词汇热身",
+            "讲故事接龙"
+          ],
+          "faqTitle": "动物页常见问题",
+          "faqs": [
+            {
+              "question": "随机动物生成器适合拿来做什么？",
+              "answer": "最常见的是绘画灵感、课堂互动、即兴表演、派对游戏和写作训练。动物比抽象名词更容易被想象和表达。"
+            },
+            {
+              "question": "可以一次生成多个动物吗？",
+              "answer": "可以。你可以自己输入数量，还能切换是否允许重复，适合做快速抽卡或批量题库。"
+            },
+            {
+              "question": "为什么不把动物都放在首页里就好？",
+              "answer": "因为动物属于非常明确的子意图。独立页面更方便用户直接命中，也更有利于搜索引擎理解页面主题。"
+            }
+          ]
+        }
       },
       "ja": {
         "name": "動物",
         "shortName": "動物",
-        "description": "イラストの発想や授業のアイスブレイクに使える動物ワードをすぐに引けます。"
+        "description": "イラストの発想や授業のアイスブレイクに使える動物ワードをすぐに引けます。",
+        "seo": {
+          "introTitle": "動物ページは、ただの派生ページではなく独立した着地先として作るべきです。",
+          "introBody": "このページに来る人は、幅広いモノではなく動物のお題を求めています。絵のネタ、授業の導入、ジェスチャーゲーム、物語づくりなど、動物というテーマだけで十分に検索意図が成立しています。だからこそ、動物専用の説明文や FAQ を持つことが重要です。",
+          "reasonsTitle": "動物ページを分ける意味",
+          "reasons": [
+            {
+              "title": "検索意図に合う",
+              "body": "動物を探しているユーザーにとって、混在したトップページより動物専用ページのほうが自然です。"
+            },
+            {
+              "title": "使いやすい結果になる",
+              "body": "テーマが動物に絞られているため、授業やゲーム、お絵描きのお題としてすぐ使えます。"
+            },
+            {
+              "title": "今後の拡張がしやすい",
+              "body": "動物カテゴリーだけで説明、FAQ、追加の長尾ページを増やしていけるため、薄い量産ページになりにくい構成です。"
+            }
+          ],
+          "useCasesTitle": "動物お題の使い道",
+          "useCases": [
+            "お絵描きのお題",
+            "授業の導入",
+            "ジェスチャーゲーム",
+            "物語づくり",
+            "語彙練習",
+            "アイスブレイク"
+          ],
+          "faqTitle": "動物ページ FAQ",
+          "faqs": [
+            {
+              "question": "ランダム動物ジェネレーターは何に使えますか？",
+              "answer": "絵のネタ、授業、即興ゲーム、創作練習など、短時間で動物テーマのお題が欲しい場面で役立ちます。"
+            },
+            {
+              "question": "複数の動物を一度に出せますか？",
+              "answer": "はい。数量を自由に入力でき、重複を許可するかどうかも切り替えられます。"
+            },
+            {
+              "question": "なぜトップページとは別に動物ページがあるのですか？",
+              "answer": "動物だけを探している人に対して、より意図に合ったページを用意するためです。"
+            }
+          ]
+        }
       }
     }
   },
@@ -29,17 +158,146 @@
       "en": {
         "name": "Household Items",
         "shortName": "Household",
-        "description": "Generate everyday objects from around the home for charades, storytelling, or product brainstorms."
+        "description": "Generate everyday objects from around the home for charades, storytelling, or product brainstorms.",
+        "seo": {
+          "introTitle": "A random household item generator is useful because everyday objects are easier to turn into activities.",
+          "introBody": "Household prompts are practical, familiar, and flexible. They work well in charades, product ideation, visual drawing games, classroom vocabulary rounds, and even naming exercises. A dedicated household page gives users a more focused experience than a generic object list and helps the page stand on its own in search.",
+          "reasonsTitle": "Why a household generator page matters",
+          "reasons": [
+            {
+              "title": "Everyday object prompts are versatile",
+              "body": "Household items are recognizable, concrete, and easy to act out or describe, which makes them ideal for games and teaching."
+            },
+            {
+              "title": "The page supports narrower intent",
+              "body": "Users looking for home-related objects want different results from users who just want any random noun."
+            },
+            {
+              "title": "It reduces template sameness",
+              "body": "Dedicated copy around home items gives this page more textual identity and lowers the risk of doorway-style repetition."
+            }
+          ],
+          "useCasesTitle": "Ways people use random household items",
+          "useCases": [
+            "Charades prompts",
+            "Vocabulary lessons",
+            "Object sketching",
+            "Product brainstorming",
+            "Memory games",
+            "Creative speaking rounds"
+          ],
+          "faqTitle": "Household generator FAQ",
+          "faqs": [
+            {
+              "question": "Why use random household items instead of general random objects?",
+              "answer": "Household items stay within a familiar theme, which makes them easier to use for games, lessons, and brainstorming activities."
+            },
+            {
+              "question": "Can I use this for classrooms or workshops?",
+              "answer": "Yes. Household prompts are concrete enough for younger learners and flexible enough for speaking games or creative exercises."
+            },
+            {
+              "question": "Does this page support bulk generation?",
+              "answer": "Yes. You can create a larger list and copy it for worksheets, slides, or facilitation notes."
+            }
+          ]
+        }
       },
       "zh": {
         "name": "家居用品",
         "shortName": "家居",
-        "description": "生成日常家居物品，适合你做你画我猜、创作故事或产品发想。"
+        "description": "生成日常家居物品，适合你做你画我猜、创作故事或产品发想。",
+        "seo": {
+          "introTitle": "随机家居用品很好用，因为它们熟悉、具体，而且非常适合转化成活动。",
+          "introBody": "家居物品比很多抽象词更容易被描述、被画出来、被演出来。无论是课堂词汇练习、派对游戏、创意表达，还是产品脑暴，围绕日常物品展开都会更自然。独立的家居页也让这个分类不再只是首页的附属过滤器。",
+          "reasonsTitle": "为什么家居页值得单独做",
+          "reasons": [
+            {
+              "title": "更容易被使用",
+              "body": "家居用品具体又常见，特别适合你演我猜、画图提示和词汇教学。"
+            },
+            {
+              "title": "更贴近垂直需求",
+              "body": "搜家居用品的人，并不想看到动物、食物和搞怪物件混在一起。"
+            },
+            {
+              "title": "更能拉开页面差异",
+              "body": "有了围绕家居主题的文本和 FAQ，这个页面会比模板式分类页更有独立价值。"
+            }
+          ],
+          "useCasesTitle": "家居用品页面适合这些场景",
+          "useCases": [
+            "你演我猜",
+            "词汇教学",
+            "物品速写",
+            "产品脑暴",
+            "记忆游戏",
+            "口语表达训练"
+          ],
+          "faqTitle": "家居页常见问题",
+          "faqs": [
+            {
+              "question": "为什么要用随机家居用品，而不是随机物品？",
+              "answer": "因为家居用品更有主题一致性，特别适合教学、游戏和创意活动，不会让结果过于发散。"
+            },
+            {
+              "question": "这个页面适合课堂和工作坊吗？",
+              "answer": "适合。家居物品足够具体，既能给孩子用，也适合成人做表达或创意训练。"
+            },
+            {
+              "question": "可以批量生成家居清单吗？",
+              "answer": "可以。你可以一次生成更长的列表，直接复制到课件、题卡或活动手册里。"
+            }
+          ]
+        }
       },
       "ja": {
         "name": "日用品",
         "shortName": "日用品",
-        "description": "日常の身近なアイテムをランダム表示。ジェスチャーゲームや発想出しに便利です。"
+        "description": "日常の身近なアイテムをランダム表示。ジェスチャーゲームや発想出しに便利です。",
+        "seo": {
+          "introTitle": "日用品ページは、身近なお題を使いたい人に向けた実用的な着地先です。",
+          "introBody": "日用品は具体的で分かりやすく、授業、ゲーム、発想出し、お絵描きのお題に使いやすいカテゴリです。トップページの汎用性とは別に、日用品だけが欲しい人のために独立したページを持つことで、検索意図にも使い勝手にも合いやすくなります。",
+          "reasonsTitle": "日用品ページが必要な理由",
+          "reasons": [
+            {
+              "title": "具体的で扱いやすい",
+              "body": "日用品は誰でもイメージしやすく、ジェスチャーや説明の題材としてすぐ使えます。"
+            },
+            {
+              "title": "テーマがぶれにくい",
+              "body": "カテゴリが絞られているため、授業やゲームの流れを壊しにくい結果になります。"
+            },
+            {
+              "title": "ページの独自性を作れる",
+              "body": "日用品に特化した本文や FAQ を持たせることで、量産ページ感を下げられます。"
+            }
+          ],
+          "useCasesTitle": "日用品お題の使い道",
+          "useCases": [
+            "ジェスチャーゲーム",
+            "語彙学習",
+            "スケッチ練習",
+            "発想出し",
+            "記憶ゲーム",
+            "会話練習"
+          ],
+          "faqTitle": "日用品ページ FAQ",
+          "faqs": [
+            {
+              "question": "なぜランダム物体全体ではなく日用品ページを使うのですか？",
+              "answer": "日用品だけに絞ることで、より身近で使いやすい結果が得られるからです。"
+            },
+            {
+              "question": "授業でも使えますか？",
+              "answer": "はい。日用品は語彙学習や会話練習の題材として使いやすいカテゴリです。"
+            },
+            {
+              "question": "複数の日用品を一括で出せますか？",
+              "answer": "できます。リスト生成機能を使えば、授業資料やメモにそのまま使える候補を作れます。"
+            }
+          ]
+        }
       }
     }
   },
@@ -51,17 +309,146 @@
       "en": {
         "name": "Food",
         "shortName": "Food",
-        "description": "Serve up random food ideas for prompts, classroom games, creative challenges, and quick naming sessions."
+        "description": "Serve up random food ideas for prompts, classroom games, creative challenges, and quick naming sessions.",
+        "seo": {
+          "introTitle": "Food prompts work because they are visual, emotional, and easy to remember.",
+          "introBody": "Random food ideas are useful in far more contexts than they first appear. They fit drawing games, menu naming exercises, storytelling prompts, classroom icebreakers, and visual memory challenges. A dedicated food generator page gives the topic more depth and keeps the results aligned with food-related intent instead of mixing in unrelated objects.",
+          "reasonsTitle": "Why keep food on its own generator page",
+          "reasons": [
+            {
+              "title": "Food has immediate visual appeal",
+              "body": "Meals and snacks are easy to picture, which makes them ideal for illustration prompts and games."
+            },
+            {
+              "title": "Themed prompts are more usable",
+              "body": "People looking for random food ideas are rarely looking for home tools or abstract objects at the same time."
+            },
+            {
+              "title": "More unique copy, less thin-page risk",
+              "body": "Food-specific explanations and FAQs make the page feel like a real destination, not a slightly renamed template."
+            }
+          ],
+          "useCasesTitle": "Good uses for random food prompts",
+          "useCases": [
+            "Menu naming",
+            "Drawing challenges",
+            "Food charades",
+            "Story prompts",
+            "Classroom games",
+            "Creative branding exercises"
+          ],
+          "faqTitle": "Food generator FAQ",
+          "faqs": [
+            {
+              "question": "What is a random food generator useful for?",
+              "answer": "It can help with games, drawing prompts, naming exercises, teaching activities, and any creative task where food themes are easier to use than broad object lists."
+            },
+            {
+              "question": "Can I generate repeat food items?",
+              "answer": "Yes. The visual generator lets you choose whether repeated results are allowed, which is useful when you want either variety or randomness with replacement."
+            },
+            {
+              "question": "Why should this page exist separately from the homepage?",
+              "answer": "Because food-related searches have their own intent. A dedicated page serves those queries better and helps the site avoid overly generic category handling."
+            }
+          ]
+        }
       },
       "zh": {
         "name": "食物",
         "shortName": "食物",
-        "description": "随机抽取食物词条，适合创意挑战、课堂游戏和命名灵感。"
+        "description": "随机抽取食物词条，适合创意挑战、课堂游戏和命名灵感。",
+        "seo": {
+          "introTitle": "食物类提示词天然适合做视觉、游戏和命名场景。",
+          "introBody": "很多人低估了随机食物页面的用途。它不仅适合画画和游戏，也适合菜单命名、品牌灵感、故事开头和课堂互动。把食物做成独立分类页，能让结果更聚焦，也能让页面正文真正围绕食物这一主题展开。",
+          "reasonsTitle": "为什么食物页应该单独存在",
+          "reasons": [
+            {
+              "title": "食物更容易被想象",
+              "body": "食物有形状、有颜色、有情绪联想，所以在创意活动里特别好用。"
+            },
+            {
+              "title": "主题更清晰",
+              "body": "找随机食物的人，通常不希望结果里混入工具、家具或其他无关物件。"
+            },
+            {
+              "title": "内容差异更明显",
+              "body": "有了食物主题的解释和 FAQ，这个页面就不再只是首页的一个改名版本。"
+            }
+          ],
+          "useCasesTitle": "随机食物常见用法",
+          "useCases": [
+            "菜单命名",
+            "绘画挑战",
+            "食物你演我猜",
+            "故事提示",
+            "课堂小游戏",
+            "品牌创意练习"
+          ],
+          "faqTitle": "食物页常见问题",
+          "faqs": [
+            {
+              "question": "随机食物生成器适合哪些场景？",
+              "answer": "常见场景包括绘画提示、命名灵感、教学互动、派对游戏，以及任何需要食物主题素材的创意任务。"
+            },
+            {
+              "question": "可以生成重复的食物结果吗？",
+              "answer": "可以。你可以自己控制是否允许重复，这样既能追求多样性，也能保留真正的随机抽样体验。"
+            },
+            {
+              "question": "为什么食物页不直接并到首页？",
+              "answer": "因为食物类搜索意图本身就很清晰。独立页面更利于用户直达，也更利于 SEO。"
+            }
+          ]
+        }
       },
       "ja": {
         "name": "食べ物",
         "shortName": "食べ物",
-        "description": "創作課題やゲーム向けに、ランダムな食べ物ワードをすぐ生成できます。"
+        "description": "創作課題やゲーム向けに、ランダムな食べ物ワードをすぐ生成できます。",
+        "seo": {
+          "introTitle": "食べ物のお題は、見た目も印象も強く、使い道が広いカテゴリです。",
+          "introBody": "ランダムな食べ物は、お絵描き、授業、命名、ゲーム、ブランディング発想など、想像以上に多くの用途があります。食べ物だけに絞ったページがあることで、テーマの一貫性が生まれ、検索ユーザーにとっても分かりやすい着地先になります。",
+          "reasonsTitle": "食べ物ページを独立させる理由",
+          "reasons": [
+            {
+              "title": "視覚イメージが強い",
+              "body": "食べ物は色や形を思い浮かべやすく、お題として使いやすいカテゴリです。"
+            },
+            {
+              "title": "検索意図がはっきりしている",
+              "body": "食べ物を探している人は、他のカテゴリが混ざらない結果を求めていることが多いです。"
+            },
+            {
+              "title": "ページの独自性を作りやすい",
+              "body": "食べ物に特化した本文と FAQ によって、薄い量産ページになりにくくなります。"
+            }
+          ],
+          "useCasesTitle": "食べ物お題の活用例",
+          "useCases": [
+            "メニュー名の発想",
+            "お絵描き課題",
+            "ジェスチャーゲーム",
+            "物語の導入",
+            "授業ゲーム",
+            "ブランド発想"
+          ],
+          "faqTitle": "食べ物ページ FAQ",
+          "faqs": [
+            {
+              "question": "ランダム食べ物ジェネレーターは何に使えますか？",
+              "answer": "絵のネタ、授業、ネーミング、ゲームなど、食べ物テーマの発想が欲しい場面で使えます。"
+            },
+            {
+              "question": "同じ食べ物が重複して出ることはありますか？",
+              "answer": "設定で重複を許可するか選べます。多様性重視にも、ランダム性重視にも対応できます。"
+            },
+            {
+              "question": "なぜトップページとは別に食べ物ページがあるのですか？",
+              "answer": "食べ物だけを探している人のために、より意図に合うページを用意するためです。"
+            }
+          ]
+        }
       }
     }
   },
@@ -73,17 +460,146 @@
       "en": {
         "name": "Nature",
         "shortName": "Nature",
-        "description": "Pull nature-inspired objects for journaling prompts, landscape sketching, or mindfulness exercises."
+        "description": "Pull nature-inspired objects for journaling prompts, landscape sketching, or mindfulness exercises.",
+        "seo": {
+          "introTitle": "Nature prompts bring a softer, more atmospheric kind of randomness.",
+          "introBody": "A random nature generator page is helpful when the goal is mood, scenery, reflection, or visual calm rather than noisy general objects. Nature prompts work well for journaling, landscape sketching, meditation prompts, classroom description exercises, and visual storytelling. That makes this page distinct in both topic and tone.",
+          "reasonsTitle": "Why nature deserves its own page",
+          "reasons": [
+            {
+              "title": "The tone is different from general objects",
+              "body": "Nature prompts are often used for mood, environment, and reflection rather than fast comedy or object recall."
+            },
+            {
+              "title": "It supports specific creative tasks",
+              "body": "People looking for natural elements usually want scenery, seasonal cues, or calming imagery, not random appliances."
+            },
+            {
+              "title": "Unique copy improves page identity",
+              "body": "Nature-specific explanations, use cases, and FAQs help this page stand apart from the rest of the generator set."
+            }
+          ],
+          "useCasesTitle": "How random nature prompts are commonly used",
+          "useCases": [
+            "Landscape sketching",
+            "Journaling prompts",
+            "Mindfulness exercises",
+            "Descriptive writing",
+            "Seasonal teaching prompts",
+            "Visual storytelling"
+          ],
+          "faqTitle": "Nature generator FAQ",
+          "faqs": [
+            {
+              "question": "Why use a random nature generator?",
+              "answer": "Nature prompts are useful when you want calmer, more descriptive inspiration for art, writing, reflection, and teaching."
+            },
+            {
+              "question": "Is this only for artists?",
+              "answer": "No. Nature prompts also work well in journals, classrooms, speaking exercises, and mindful warmups."
+            },
+            {
+              "question": "Can I still generate a full list instead of one item?",
+              "answer": "Yes. The page includes bulk generation, so you can build a larger list of nature prompts whenever needed."
+            }
+          ]
+        }
       },
       "zh": {
         "name": "自然",
         "shortName": "自然",
-        "description": "抽取自然相关物品和元素，用于写作提示、风景速写或冥想练习。"
+        "description": "抽取自然相关物品和元素，用于写作提示、风景速写或冥想练习。",
+        "seo": {
+          "introTitle": "自然类提示词更安静，也更适合情绪、场景和描述练习。",
+          "introBody": "和普通随机物品不同，自然类更常被用在风景速写、写作描写、课堂观察、冥想热身和氛围创作里。它强调的是环境、情绪和画面感，而不是单纯的搞笑或随机性。把自然独立成页，能让这个主题更清晰。",
+          "reasonsTitle": "为什么自然页需要独立存在",
+          "reasons": [
+            {
+              "title": "页面气质不同",
+              "body": "自然类提示更偏向氛围、环境和情绪，不适合和一般杂项物品混在一起。"
+            },
+            {
+              "title": "适用任务更垂直",
+              "body": "用户来到这里，通常是想找风景、季节、自然元素，而不是家电或搞怪道具。"
+            },
+            {
+              "title": "更容易形成独特内容",
+              "body": "围绕自然主题展开的文字、场景和 FAQ，能让页面更有独立价值。"
+            }
+          ],
+          "useCasesTitle": "自然类提示词常见用途",
+          "useCases": [
+            "风景速写",
+            "日记提示",
+            "冥想练习",
+            "描写写作",
+            "季节教学",
+            "视觉故事创作"
+          ],
+          "faqTitle": "自然页常见问题",
+          "faqs": [
+            {
+              "question": "为什么要用随机自然生成器？",
+              "answer": "当你需要更安静、更具画面感的灵感时，自然类提示词通常比普通物品更好用。"
+            },
+            {
+              "question": "只有画画的人会用这个页面吗？",
+              "answer": "不是。自然类同样适合写日记、课堂描述、口语训练和正念热身。"
+            },
+            {
+              "question": "我可以一次生成一整组自然元素吗？",
+              "answer": "可以。页面支持批量生成，方便你整理成清单或直接复制到练习材料里。"
+            }
+          ]
+        }
       },
       "ja": {
         "name": "自然",
         "shortName": "自然",
-        "description": "自然モチーフをランダム表示。日記、スケッチ、マインドフルネスの導入に使えます。"
+        "description": "自然モチーフをランダム表示。日記、スケッチ、マインドフルネスの導入に使えます。",
+        "seo": {
+          "introTitle": "自然ページは、落ち着いた発想や情景描写を求める人向けのカテゴリです。",
+          "introBody": "自然モチーフは、風景スケッチ、日記、授業、瞑想、描写練習などで使いやすいお題です。一般的なランダム物体ページとは違い、このページでは自然に関する空気感や使い道を前提にした内容を補えるため、テーマの独自性を出しやすくなります。",
+          "reasonsTitle": "自然ページを分ける意味",
+          "reasons": [
+            {
+              "title": "テーマの質感が違う",
+              "body": "自然系のお題は、雰囲気や情景描写に向いており、一般的な物体リストとは役割が異なります。"
+            },
+            {
+              "title": "目的がより具体的",
+              "body": "景色や季節感を探している人にとって、自然専用ページのほうが使いやすいです。"
+            },
+            {
+              "title": "独自テキストを持たせやすい",
+              "body": "自然に特化した本文や FAQ があることで、量産感を抑えられます。"
+            }
+          ],
+          "useCasesTitle": "自然お題の使い道",
+          "useCases": [
+            "風景スケッチ",
+            "日記の導入",
+            "マインドフルネス",
+            "描写練習",
+            "季節の授業",
+            "物語づくり"
+          ],
+          "faqTitle": "自然ページ FAQ",
+          "faqs": [
+            {
+              "question": "ランダム自然ジェネレーターは何に使えますか？",
+              "answer": "絵、文章、授業、瞑想の導入など、落ち着いた雰囲気の発想が欲しい場面で便利です。"
+            },
+            {
+              "question": "アーティスト向けだけですか？",
+              "answer": "いいえ。日記、会話練習、授業の観察活動などにも使えます。"
+            },
+            {
+              "question": "まとめて自然要素を出せますか？",
+              "answer": "はい。一括生成に対応しているので、リストとして使うこともできます。"
+            }
+          ]
+        }
       }
     }
   },
@@ -95,17 +611,146 @@
       "en": {
         "name": "Funny Objects",
         "shortName": "Funny",
-        "description": "Get quirky and slightly absurd objects that make party games, improv scenes, and content prompts more playful."
+        "description": "Get quirky and slightly absurd objects that make party games, improv scenes, and content prompts more playful.",
+        "seo": {
+          "introTitle": "Funny object pages perform better when they embrace absurdity instead of pretending to be neutral.",
+          "introBody": "A random funny object generator is different from a general object picker because the goal is not balance or utility. It is surprise, contrast, and playful energy. That makes this page useful for improv games, party prompts, silly storytelling, content hooks, and short-form creative exercises where a stranger result is more valuable than a normal one.",
+          "reasonsTitle": "Why a funny-object page earns its own space",
+          "reasons": [
+            {
+              "title": "The intent is playful, not generic",
+              "body": "People searching for funny random objects want weird, memorable results rather than neutral nouns."
+            },
+            {
+              "title": "It supports specific creative formats",
+              "body": "Improv, party games, and short-form content prompts all benefit from more absurd object choices."
+            },
+            {
+              "title": "Distinct copy reduces sameness",
+              "body": "Leaning into humor gives this page a clear voice and helps it differ from the site's calmer utility pages."
+            }
+          ],
+          "useCasesTitle": "Best uses for funny random objects",
+          "useCases": [
+            "Improv games",
+            "Party icebreakers",
+            "Short-form content ideas",
+            "Comedy writing prompts",
+            "Warmup games",
+            "Silly storytelling"
+          ],
+          "faqTitle": "Funny object generator FAQ",
+          "faqs": [
+            {
+              "question": "What makes a funny object generator different?",
+              "answer": "It is designed for surprise and playful energy. The goal is not ordinary usefulness but better prompts for games, comedy, and creative content."
+            },
+            {
+              "question": "Can I use this for improv or party games?",
+              "answer": "Absolutely. Funny objects are especially effective in improv scenes, charades, warmups, and social icebreakers."
+            },
+            {
+              "question": "Do repeated results still make sense on this page?",
+              "answer": "Yes. In funny mode, allowing repeats can actually keep the randomness feeling looser and more chaotic if that is the vibe you want."
+            }
+          ]
+        }
       },
       "zh": {
         "name": "搞怪物品",
         "shortName": "搞怪",
-        "description": "生成带点无厘头气质的物品，适合派对游戏、即兴表演和短内容灵感。"
+        "description": "生成带点无厘头气质的物品，适合派对游戏、即兴表演和短内容灵感。",
+        "seo": {
+          "introTitle": "搞怪物品页的价值，不在于“实用”，而在于制造意外感。",
+          "introBody": "这个页面和普通随机物品页不一样，它追求的不是中性和均衡，而是出其不意、荒诞、好笑。这样的结果特别适合派对游戏、即兴表演、短视频创意、轻喜剧写作和社交破冰。独立成页后，它的语气和用途都会更鲜明。",
+          "reasonsTitle": "为什么搞怪页值得独立存在",
+          "reasons": [
+            {
+              "title": "搜索意图本来就更偏娱乐",
+              "body": "搜搞怪随机物品的人，不是想看普通名词，而是想要更离谱、更有记忆点的东西。"
+            },
+            {
+              "title": "适配的创作场景更明确",
+              "body": "即兴、小品、派对游戏和短内容创意，都更依赖这种带点荒诞感的结果。"
+            },
+            {
+              "title": "页面语气能拉开差异",
+              "body": "搞怪页天然可以有更鲜明的风格，这会让它和其他分类页形成明显区别。"
+            }
+          ],
+          "useCasesTitle": "搞怪物品最适合这些场景",
+          "useCases": [
+            "即兴游戏",
+            "派对破冰",
+            "短内容灵感",
+            "喜剧写作提示",
+            "热场小游戏",
+            "无厘头故事"
+          ],
+          "faqTitle": "搞怪页常见问题",
+          "faqs": [
+            {
+              "question": "搞怪物品生成器和普通随机物品有什么区别？",
+              "answer": "它更强调意外感和娱乐感，目标不是给你一个普通词，而是给你一个更有戏的提示物。"
+            },
+            {
+              "question": "这个页面适合即兴表演或派对吗？",
+              "answer": "非常适合。搞怪物品比普通物件更容易制造笑点，也更适合互动型活动。"
+            },
+            {
+              "question": "在这个页面里允许重复有意义吗？",
+              "answer": "有意义。如果你希望结果更随意、更混乱一点，允许重复反而会保留这种轻松的随机感。"
+            }
+          ]
+        }
       },
       "ja": {
         "name": "おもしろアイテム",
         "shortName": "おもしろ",
-        "description": "少しシュールで楽しいアイテムをランダム生成。パーティーや即興ネタに向いています。"
+        "description": "少しシュールで楽しいアイテムをランダム生成。パーティーや即興ネタに向いています。",
+        "seo": {
+          "introTitle": "おもしろアイテムページは、実用性よりも“意外性”を取りに行くカテゴリです。",
+          "introBody": "このページの役割は、普通の物を出すことではなく、少し変で記憶に残るお題を出すことです。即興、パーティー、短いネタ作り、動画アイデア、アイスブレイクなど、場を動かすためのランダム性が欲しいときに向いています。",
+          "reasonsTitle": "おもしろページを独立させる理由",
+          "reasons": [
+            {
+              "title": "求められる意図が違う",
+              "body": "このカテゴリを探す人は、普通の名詞ではなく、少し変で面白い結果を期待しています。"
+            },
+            {
+              "title": "使う場面がはっきりしている",
+              "body": "即興、パーティー、短いネタ作りでは、おもしろ系のお題のほうが流れを作りやすいです。"
+            },
+            {
+              "title": "ページの個性を出しやすい",
+              "body": "ユーモア寄りの説明や FAQ を持たせることで、他カテゴリとの差を明確にできます。"
+            }
+          ],
+          "useCasesTitle": "おもしろアイテムの使い道",
+          "useCases": [
+            "即興ゲーム",
+            "パーティーの導入",
+            "短い動画ネタ",
+            "コメディ発想",
+            "ウォームアップゲーム",
+            "ゆるい物語づくり"
+          ],
+          "faqTitle": "おもしろページ FAQ",
+          "faqs": [
+            {
+              "question": "おもしろアイテムジェネレーターは普通の物体ページと何が違いますか？",
+              "answer": "普通の物ではなく、驚きや笑いにつながるお題を出すことを重視している点です。"
+            },
+            {
+              "question": "即興やパーティーで使えますか？",
+              "answer": "はい。むしろそうした場面でこそ、このカテゴリのランダム性が活きます。"
+            },
+            {
+              "question": "重複を許可する意味はありますか？",
+              "answer": "あります。ゆるくカオスな雰囲気を保ちたいときは、重複ありのほうが面白く感じることもあります。"
+            }
+          ]
+        }
       }
     }
   }

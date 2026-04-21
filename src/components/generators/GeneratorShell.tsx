@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Locale } from '@/lib/i18n-config'
 import { i18n } from '@/lib/i18n-config'
-import { buildWebApplicationJsonLd, getLocalizedPath } from '@/lib/seo'
+import { buildSoftwareApplicationJsonLd, getLocalizedPath } from '@/lib/seo'
 import type { LocalizedCategory, LocalizedObject } from '@/lib/objects'
 import { BulkGenerator } from '@/components/generators/BulkGenerator'
 import { VisualGenerator } from '@/components/generators/VisualGenerator'
@@ -35,7 +35,7 @@ export function GeneratorShell({
   items,
   activeCategorySlug,
 }: GeneratorShellProps) {
-  const jsonLd = buildWebApplicationJsonLd({
+  const jsonLd = buildSoftwareApplicationJsonLd({
     locale,
     title,
     description,

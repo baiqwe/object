@@ -14,6 +14,7 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
   const dict = await getDictionary(params.lang)
 
   return createMetadata({
+    locale: params.lang,
     title: dict.home.seoTitle,
     description: dict.home.description,
     path: '/',

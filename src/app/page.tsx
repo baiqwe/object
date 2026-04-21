@@ -7,7 +7,8 @@ import { siteConfig } from '@/lib/site-config'
 import enDict from '@/dictionaries/en.json'
 
 export const metadata: Metadata = createMetadata({
-  title: `${siteConfig.name} With Pictures and Copyable Lists`,
+  locale: 'en',
+  title: `${siteConfig.name} With Visual Cards and Copyable Lists`,
   description: siteConfig.description,
   path: '/',
 })

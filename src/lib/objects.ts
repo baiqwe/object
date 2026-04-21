@@ -3,10 +3,32 @@ import path from 'path'
 import { cache } from 'react'
 import type { Locale } from '@/lib/i18n-config'
 
+type SeoFaq = {
+  question: string
+  answer: string
+}
+
+type SeoReason = {
+  title: string
+  body: string
+}
+
+type SeoContent = {
+  introTitle: string
+  introBody: string
+  reasonsTitle: string
+  reasons: SeoReason[]
+  useCasesTitle: string
+  useCases: string[]
+  faqTitle: string
+  faqs: SeoFaq[]
+}
+
 type LocalizedText = {
   name: string
   description: string
   shortName?: string
+  seo?: SeoContent
 }
 
 export type CategoryRecord = {
@@ -46,11 +68,6 @@ export const getObjects = cache((): ObjectRecord[] => {
 
 export function getCategoryPageSlug(slug: string) {
   return `random-${slug}-generator`
-}
-
-export function getCategorySlugFromPageSlug(pageSlug: string) {
-  const match = pageSlug.match(/^random-(.+)-generator$/)
-  return match?.[1] ?? null
 }
 
 export function getCategoryBySlug(slug: string) {

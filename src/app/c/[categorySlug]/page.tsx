@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import { CategoryLandingContent } from '@/components/CategoryLandingContent'
 import { GeneratorShell } from '@/components/generators/GeneratorShell'
 import {
   getCategories,
@@ -28,6 +29,7 @@ export async function generateMetadata({
   }
 
   return createMetadata({
+    locale: 'en',
     title: `${category.i18n.en.name} Random Generator With Visual Cards`,
     description: category.i18n.en.description,
     path: `/${getCategoryPageSlug(category.slug)}`,
@@ -42,19 +44,22 @@ export default function CategoryPage({ params }: { params: { categorySlug: strin
   }
 
   return (
-    <GeneratorShell
-      locale="en"
-      path={`/${getCategoryPageSlug(category.slug)}`}
-      heroEyebrow={category.i18n.en.shortName ?? category.i18n.en.name}
-      title={`${category.i18n.en.name} Random Generator`}
-      description={category.i18n.en.description}
-      visualTitle={`Generate random ${category.i18n.en.name.toLowerCase()} prompts`}
-      visualDescription={`Each click pulls a fresh ${category.i18n.en.name.toLowerCase()} pick from the curated ${category.i18n.en.name.toLowerCase()} set for this page.`}
-      bulkTitle={`Build a quick ${category.i18n.en.name.toLowerCase()} list`}
-      bulkDescription={`Need a longer batch for writing sprints, classroom rounds, or improv games? Generate and copy a clean list in one tap.`}
-      categories={getLocalizedCategories('en')}
-      items={getLocalizedObjects('en', category.slug)}
-      activeCategorySlug={category.slug}
-    />
+    <>
+      <GeneratorShell
+        locale="en"
+        path={`/${getCategoryPageSlug(category.slug)}`}
+        heroEyebrow={category.i18n.en.shortName ?? category.i18n.en.name}
+        title={`${category.i18n.en.name} Random Generator`}
+        description={category.i18n.en.description}
+        visualTitle={`Generate random ${category.i18n.en.name.toLowerCase()} prompts`}
+        visualDescription={`Each click pulls a fresh ${category.i18n.en.name.toLowerCase()} pick from the curated ${category.i18n.en.name.toLowerCase()} set for this page.`}
+        bulkTitle={`Build a quick ${category.i18n.en.name.toLowerCase()} list`}
+        bulkDescription={`Need a longer batch for writing sprints, classroom rounds, or improv games? Generate and copy a clean list in one tap.`}
+        categories={getLocalizedCategories('en')}
+        items={getLocalizedObjects('en', category.slug)}
+        activeCategorySlug={category.slug}
+      />
+      {category.i18n.en.seo ? <CategoryLandingContent content={category.i18n.en.seo} /> : null}
+    </>
   )
 }
