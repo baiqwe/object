@@ -1,59 +1,74 @@
 {
   "navigation": {
     "home": "Home",
-    "posts": "Articles",
-    "resources": "Resources",
-    "admin": "Admin",
-    "login": "Login",
-    "logout": "Logout"
+    "categories": {
+      "animals": "Animals",
+      "household": "Household",
+      "food": "Food",
+      "funny": "Funny"
+    }
   },
   "home": {
-    "title": "GitBase",
-    "subtitle": "Open Source Dynamic Website CMS Without Database",
-    "description": "GitBase is a dynamic, database-free website built with Next.js, Tailwind CSS, and Shadcn/UI, featuring a content management system powered by the GitHub API for seamless updates and administration.",
-    "moreArticles": "More articles",
-    "moreResources": "More resources"
-  },
-  "articles": {
-    "title": "Articles",
-    "noCategory": "No Category"
-  },
-  "resources": {
-    "title": "Resources",
-    "noCategory": "No Category"
-  },
-  "admin": {
-    "dashboard": "Admin Dashboard",
-    "manageArticles": "Manage Articles",
-    "resourceManagement": "Resource Management",
-    "name": "Name",
-    "description": "Description",
-    "url": "URL",
-    "category": "Category",
-    "actions": "Actions",
-    "edit": "Edit",
-    "save": "Save",
-    "addNew": "Add New",
-    "createArticle": "Create New Article",
-    "editArticle": "Edit Article",
-    "articleTitle": "Article Title",
-    "articleDescription": "Article Description",
-    "articleSlug": "Article Slug",
-    "articleContent": "Article Content (Markdown)",
-    "categoryOptional": "Category (Optional)",
-    "creating": "Creating...",
-    "create": "Create Article",
-    "loading": "Loading...",
-    "savingArticle": "Saving..."
-  },
-  "login": {
-    "title": "Admin Login",
-    "username": "Username",
-    "password": "Password",
-    "enterUsername": "Enter username",
-    "enterPassword": "Enter password",
-    "signIn": "Sign In",
-    "signingIn": "Signing In..."
+    "eyebrow": "Fast visual prompt tool",
+    "title": "Random Object Generator",
+    "seoTitle": "Random Object Generator With Pictures and Copyable Lists",
+    "description": "Generate random objects, animals, foods, and playful prompts in seconds. Built for classrooms, games, improv sessions, and creative warmups.",
+    "visualTitle": "Generate a random object card",
+    "visualDescription": "A lightweight visual picker that feels better than a plain text list and stays fast enough for repeated use.",
+    "bulkTitle": "Generate a batch for copy and paste",
+    "bulkDescription": "Create a longer object list when you need prompts for worksheets, writers rooms, naming sessions, or icebreakers.",
+    "landing": {
+      "introTitle": "A stronger random object generator should feel useful before it feels gimmicky.",
+      "introBody": "Most random object generators stop at a bare list of words. This homepage is designed to do more. You can generate a single visual card when you need a fast prompt, create a larger copyable batch for classroom or workshop use, and jump straight into focused category pages when your intent is more specific. That gives the page a better user flow and gives search engines richer, more differentiated content to index.",
+      "featureTitle": "What makes this version better",
+      "featureLead": "The homepage now acts like a true landing page instead of a thin tool wrapper.",
+      "features": [
+        {
+          "title": "Visual first",
+          "body": "A random object is easier to use when the result feels like a card, not a dead list item."
+        },
+        {
+          "title": "Built for reuse",
+          "body": "Bulk generation makes the output easy to copy into lesson plans, docs, prompts, or game sheets."
+        },
+        {
+          "title": "Category depth",
+          "body": "Animals, household items, food, nature, and funny objects each have their own crawlable destination."
+        }
+      ],
+      "categoryTitle": "Explore keyword-rich category pages without turning the site into thin pSEO sludge",
+      "categoryLead": "Each category has its own generator page, its own localized copy, and enough specificity to support real search intent. That makes the site easier to navigate and gives us cleaner expansion paths for future long-tail pages.",
+      "useCasesTitle": "Good for more than just a random laugh",
+      "useCases": [
+        "Drawing prompts",
+        "ESL classroom warmups",
+        "Charades and party games",
+        "Improvisation practice",
+        "Creative writing sprints",
+        "Naming exercises",
+        "Product brainstorming",
+        "Icebreaker rounds"
+      ],
+      "faqTitle": "Homepage FAQ",
+      "faqs": [
+        {
+          "question": "What is a random object generator used for?",
+          "answer": "People use a random object generator for games, classroom prompts, drawing challenges, improvisation, and fast creative warmups. The best versions are quick to refresh and easy to copy."
+        },
+        {
+          "question": "Can I generate more than one object at a time?",
+          "answer": "Yes. Use bulk mode when you need a longer list instead of a single random card. That is especially helpful for worksheets, team exercises, and prompt libraries."
+        },
+        {
+          "question": "Why are there category pages as well as the homepage?",
+          "answer": "The homepage is broad, but category pages help when your intent is narrower. Someone looking for random animals or household objects should land on a page built around that exact need."
+        },
+        {
+          "question": "Is this tool free to use?",
+          "answer": "Yes. The current MVP is designed as a free multilingual traffic and utility layer, with no sign-in wall and no paid gate on the core generator."
+        }
+      ]
+    }
   },
   "language": {
     "select": "Select Language",

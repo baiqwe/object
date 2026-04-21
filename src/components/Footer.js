@@ -1,64 +1,55 @@
-// components/Footer.js
-import Link from 'next/link';
+import Link from 'next/link'
+import { siteConfig } from '@/lib/site-config'
 
 export function Footer() {
   return (
-    <footer className="bg-gray-100 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">About</h3>
-            <p className="mt-4 text-base text-gray-500">
-              GitBase is an open-source dynamic website solution without a traditional database, built with Next.js and powered by GitHub.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Quick Links</h3>
-            <ul className="mt-4 space-y-4">
-              <li>
-                <Link href="/" className="text-base text-gray-500 hover:text-gray-900">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources" className="text-base text-gray-500 hover:text-gray-900">
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link href="/posts" className="text-base text-gray-500 hover:text-gray-900">
-                  Articles
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Connect</h3>
-            <ul className="mt-4 space-y-4">
-              <li>
-                <a href="https://gitbase.app/" target="_blank" className="text-base text-gray-500 hover:text-gray-900">
-                  GitBase
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/qiayue/gitbase" target="_blank" className="text-base text-gray-500 hover:text-gray-900">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/gefei55" target="_blank" className="text-base text-gray-500 hover:text-gray-900">
-                  Twitter
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-8 border-t border-gray-200 pt-8">
-          <p className="text-base text-gray-400 text-center">
-            &copy; {new Date().getFullYear()} GitBase. All rights reserved.
+    <footer className="border-t border-black/5 bg-[#f7f3ea]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-12 sm:px-6 lg:grid-cols-3 lg:px-8">
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-600">About</h3>
+          <p className="mt-4 text-base text-slate-500">
+            {siteConfig.name} is a lightweight multilingual tool for random prompts, object lists, and category-driven idea generation.
           </p>
         </div>
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-600">Quick Links</h3>
+          <ul className="mt-4 space-y-4">
+            <li>
+              <Link href="/" className="text-base text-slate-500 hover:text-slate-900">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/random-object-generator" className="text-base text-slate-500 hover:text-slate-900">
+                Random object generator
+              </Link>
+            </li>
+            <li>
+              <Link href="/random-animals-generator" className="text-base text-slate-500 hover:text-slate-900">
+                Animal generator
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-600">Connect</h3>
+          <ul className="mt-4 space-y-4">
+            <li>
+              <a href="https://github.com/baiqwe/GitBase" target="_blank" rel="noreferrer" className="text-base text-slate-500 hover:text-slate-900">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://vercel.com/" target="_blank" rel="noreferrer" className="text-base text-slate-500 hover:text-slate-900">
+                Vercel-ready
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="mx-auto max-w-7xl border-t border-black/5 px-4 py-8 text-center text-base text-slate-400 sm:px-6 lg:px-8">
+        &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
       </div>
     </footer>
-  );
+  )
 }

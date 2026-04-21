@@ -1,37 +1,36 @@
-// pages/index.js
-import fs from 'fs'
-import path from 'path'
-import { getSortedPostsData } from '@/lib/posts'
-import ResourceList from '@/components/ResourceList'
-import ArticleList from '@/components/ArticleList'
 import { Metadata } from 'next'
+import { HomeLandingContent } from '@/components/HomeLandingContent'
+import { GeneratorShell } from '@/components/generators/GeneratorShell'
+import { getLocalizedCategories, getLocalizedObjects } from '@/lib/objects'
+import { createMetadata } from '@/lib/seo'
+import { siteConfig } from '@/lib/site-config'
+import enDict from '@/dictionaries/en.json'
 
-export const metadata: Metadata = {
-  title: 'GitBase - Open Source Dynamic Website CMS Without Database',
-  description: 'A Next.js site with Tailwind & Shadcn/UI, using GitHub API for content management. No database needed for dynamic updates.',
-}
+export const metadata: Metadata = createMetadata({
+  title: `${siteConfig.name} With Pictures and Copyable Lists`,
+  description: siteConfig.description,
+  path: '/',
+})
 
 export default function Home() {
-  const resourcesPath = path.join(process.cwd(), 'data', 'json', 'resources.json')
-  const allResources = JSON.parse(fs.readFileSync(resourcesPath, 'utf8'))
-  // Filter out deleted resources
-  const resources = allResources.filter((resource: any) => !resource.deleted)
-  const allPostsData = getSortedPostsData().slice(0, 6)
+  const categories = getLocalizedCategories('en')
 
   return (
-    <div className="container mx-auto py-12 space-y-16">
-      <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-          GitBase
-        </h1>
-        <h2 className="text-2xl tracking-tighter sm:text-3xl md:text-3xl lg:text-3xl">Open Source Dynamic Website CMS Without Database</h2>
-        <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-          GitBase is a dynamic, database-free website built with Next.js, Tailwind CSS, and Shadcn/UI, featuring a content management system powered by the GitHub API for seamless updates and administration.
-        </p>
-      </section>
-
-      <ResourceList resources={resources} />
-      <ArticleList articles={allPostsData} />
-    </div>
+    <>
+      <GeneratorShell
+        locale="en"
+        path="/"
+        heroEyebrow="Fast visual prompt tool"
+        title="Random Object Generator"
+        description="Generate random objects in a cleaner, more visual way. Use it for drawing prompts, icebreakers, improv games, naming sessions, and classroom warmups."
+        visualTitle="Draw a random object in one click"
+        visualDescription="Use visual mode when you want a fast object prompt with a little more personality than a plain text list."
+        bulkTitle="Generate a batch and copy it"
+        bulkDescription="Need ten or a hundred prompt ideas at once? Bulk mode creates a quick list you can copy into docs, slides, or worksheets."
+        categories={categories}
+        items={getLocalizedObjects('en')}
+      />
+      <HomeLandingContent locale="en" categories={categories} content={enDict.home.landing} />
+    </>
   )
 }

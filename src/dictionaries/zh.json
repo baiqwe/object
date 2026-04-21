@@ -1,59 +1,74 @@
 {
   "navigation": {
     "home": "首页",
-    "posts": "文章",
-    "resources": "资源",
-    "admin": "管理",
-    "login": "登录",
-    "logout": "登出"
+    "categories": {
+      "animals": "动物",
+      "household": "家居",
+      "food": "食物",
+      "funny": "搞怪"
+    }
   },
   "home": {
-    "title": "GitBase",
-    "subtitle": "无需数据库的开源动态网站 CMS",
-    "description": "GitBase 是一个使用 Next.js、Tailwind CSS 和 Shadcn/UI 构建的动态无数据库网站，通过 GitHub API 提供无缝的内容管理系统。",
-    "moreArticles": "更多文章",
-    "moreResources": "更多资源"
-  },
-  "articles": {
-    "title": "文章",
-    "noCategory": "无分类"
-  },
-  "resources": {
-    "title": "资源",
-    "noCategory": "无分类"
-  },
-  "admin": {
-    "dashboard": "管理后台",
-    "manageArticles": "管理文章",
-    "resourceManagement": "资源管理",
-    "name": "名称",
-    "description": "描述",
-    "url": "链接",
-    "category": "分类",
-    "actions": "操作",
-    "edit": "编辑",
-    "save": "保存",
-    "addNew": "新增",
-    "createArticle": "创建新文章",
-    "editArticle": "编辑文章",
-    "articleTitle": "文章标题",
-    "articleDescription": "文章描述",
-    "articleSlug": "文章别名",
-    "articleContent": "文章内容（Markdown）",
-    "categoryOptional": "分类（可选）",
-    "creating": "创建中...",
-    "create": "创建文章",
-    "loading": "加载中...",
-    "savingArticle": "保存中..."
-  },
-  "login": {
-    "title": "管理员登录",
-    "username": "用户名",
-    "password": "密码",
-    "enterUsername": "输入用户名",
-    "enterPassword": "输入密码",
-    "signIn": "登录",
-    "signingIn": "登录中..."
+    "eyebrow": "更适合创意场景的随机工具",
+    "title": "随机物品生成器",
+    "seoTitle": "随机物品生成器：带卡片展示与批量复制",
+    "description": "几秒钟内生成随机物品、动物、食物和搞怪提示词。适合课堂热身、游戏破冰、即兴创作和灵感采样。",
+    "visualTitle": "一键抽取随机物品卡片",
+    "visualDescription": "比纯文字列表更直观，适合连续点击获取灵感，也适合展示给别人一起玩。",
+    "bulkTitle": "批量生成并一键复制",
+    "bulkDescription": "当你需要更长的清单时，可以快速生成并复制，用到文档、课件、游戏题库或创作流程里。",
+    "landing": {
+      "introTitle": "一个更好的随机物品首页，不该只是把单词丢给你。",
+      "introBody": "很多随机物品工具只会吐出一串冷冰冰的词。现在这个首页被重新整理成更像真正的工具型落地页：你可以抽单个卡片、一次生成一批清单、再顺着分类页继续深入。这样既更适合真实使用，也让首页具备更完整的 SEO 内容层。",
+      "featureTitle": "为什么这个首页更像产品，而不是模板",
+      "featureLead": "重点不在堆功能，而在于把首页做成一个更能承接主词流量的页面。",
+      "features": [
+        {
+          "title": "更直观",
+          "body": "随机结果以卡片方式出现，比普通文字列表更容易看、也更适合连续点击。"
+        },
+        {
+          "title": "更好复制",
+          "body": "批量模式让你可以直接把结果带进课件、文档、工作坊或游戏流程。"
+        },
+        {
+          "title": "更能扩展",
+          "body": "分类页让首页不再承担所有意图，也为后续长尾 SEO 扩展留出了空间。"
+        }
+      ],
+      "categoryTitle": "分类页是首页的延伸，不是模板化的垃圾页",
+      "categoryLead": "动物、家居、食物、自然和搞怪物品都有各自的入口页。它们不仅更容易满足明确搜索意图，也让整个站点的信息架构更清晰。",
+      "useCasesTitle": "它不只是拿来随便玩一下",
+      "useCases": [
+        "绘画提示词",
+        "英语课堂热身",
+        "聚会游戏",
+        "即兴表演训练",
+        "创意写作冲刺",
+        "命名发想",
+        "产品脑暴",
+        "破冰环节"
+      ],
+      "faqTitle": "首页常见问题",
+      "faqs": [
+        {
+          "question": "随机物品生成器一般拿来做什么？",
+          "answer": "最常见的用法包括课堂互动、绘画提示、派对游戏、即兴创作和快速破冰。好用的版本应该刷新快、结果清晰，而且方便复制。"
+        },
+        {
+          "question": "可以一次生成多个物品吗？",
+          "answer": "可以。批量模式适合需要更长清单的场景，比如课件题库、写作素材池、团队活动或工作坊。"
+        },
+        {
+          "question": "为什么首页之外还要做分类页？",
+          "answer": "因为很多用户搜索意图并不宽泛。搜随机动物、随机家居用品的人，更适合直接进入对应分类页，而不是先经过一个泛首页。"
+        },
+        {
+          "question": "这个工具是免费的吗？",
+          "answer": "是的。当前 MVP 的策略是把它作为免费、多语言的流量入口，不对核心生成能力设置登录墙或付费墙。"
+        }
+      ]
+    }
   },
   "language": {
     "select": "选择语言",

@@ -1,58 +1,112 @@
 [
   {
-    "id": "tutorial",
-    "name": "Tutorial",
-    "types": ["article", "resource"],
-    "color": "blue",
-    "description": "Step-by-step learning materials"
+    "id": "animals",
+    "slug": "animals",
+    "accent": "from-amber-300 via-orange-300 to-rose-300",
+    "i18n": {
+      "en": {
+        "name": "Animals",
+        "shortName": "Animals",
+        "description": "Spin up a fresh animal prompt whenever you need a drawing cue, a classroom icebreaker, or a game night wildcard."
+      },
+      "zh": {
+        "name": "动物",
+        "shortName": "动物",
+        "description": "快速抽一个动物灵感，适合绘画、课堂互动和游戏破冰。"
+      },
+      "ja": {
+        "name": "動物",
+        "shortName": "動物",
+        "description": "イラストの発想や授業のアイスブレイクに使える動物ワードをすぐに引けます。"
+      }
+    }
   },
   {
-    "id": "guide",
-    "name": "Guide",
-    "types": ["article", "resource"],
-    "color": "green",
-    "description": "How-to guides and best practices"
+    "id": "household",
+    "slug": "household",
+    "accent": "from-sky-300 via-cyan-300 to-emerald-300",
+    "i18n": {
+      "en": {
+        "name": "Household Items",
+        "shortName": "Household",
+        "description": "Generate everyday objects from around the home for charades, storytelling, or product brainstorms."
+      },
+      "zh": {
+        "name": "家居用品",
+        "shortName": "家居",
+        "description": "生成日常家居物品，适合你做你画我猜、创作故事或产品发想。"
+      },
+      "ja": {
+        "name": "日用品",
+        "shortName": "日用品",
+        "description": "日常の身近なアイテムをランダム表示。ジェスチャーゲームや発想出しに便利です。"
+      }
+    }
   },
   {
-    "id": "documentation",
-    "name": "Documentation",
-    "types": ["article"],
-    "color": "purple",
-    "description": "Technical documentation"
+    "id": "food",
+    "slug": "food",
+    "accent": "from-lime-300 via-yellow-300 to-orange-300",
+    "i18n": {
+      "en": {
+        "name": "Food",
+        "shortName": "Food",
+        "description": "Serve up random food ideas for prompts, classroom games, creative challenges, and quick naming sessions."
+      },
+      "zh": {
+        "name": "食物",
+        "shortName": "食物",
+        "description": "随机抽取食物词条，适合创意挑战、课堂游戏和命名灵感。"
+      },
+      "ja": {
+        "name": "食べ物",
+        "shortName": "食べ物",
+        "description": "創作課題やゲーム向けに、ランダムな食べ物ワードをすぐ生成できます。"
+      }
+    }
   },
   {
-    "id": "news",
-    "name": "News",
-    "types": ["article"],
-    "color": "red",
-    "description": "Latest updates and announcements"
+    "id": "nature",
+    "slug": "nature",
+    "accent": "from-emerald-300 via-green-300 to-teal-300",
+    "i18n": {
+      "en": {
+        "name": "Nature",
+        "shortName": "Nature",
+        "description": "Pull nature-inspired objects for journaling prompts, landscape sketching, or mindfulness exercises."
+      },
+      "zh": {
+        "name": "自然",
+        "shortName": "自然",
+        "description": "抽取自然相关物品和元素，用于写作提示、风景速写或冥想练习。"
+      },
+      "ja": {
+        "name": "自然",
+        "shortName": "自然",
+        "description": "自然モチーフをランダム表示。日記、スケッチ、マインドフルネスの導入に使えます。"
+      }
+    }
   },
   {
-    "id": "framework",
-    "name": "Framework",
-    "types": ["resource"],
-    "color": "blue",
-    "description": "Development frameworks"
-  },
-  {
-    "id": "tool",
-    "name": "Tool",
-    "types": ["resource"],
-    "color": "green",
-    "description": "Development tools"
-  },
-  {
-    "id": "service",
-    "name": "Service",
-    "types": ["resource"],
-    "color": "purple",
-    "description": "Online services"
-  },
-  {
-    "id": "library",
-    "name": "Library",
-    "types": ["resource"],
-    "color": "orange",
-    "description": "Code libraries"
+    "id": "funny",
+    "slug": "funny",
+    "accent": "from-fuchsia-300 via-pink-300 to-rose-300",
+    "i18n": {
+      "en": {
+        "name": "Funny Objects",
+        "shortName": "Funny",
+        "description": "Get quirky and slightly absurd objects that make party games, improv scenes, and content prompts more playful."
+      },
+      "zh": {
+        "name": "搞怪物品",
+        "shortName": "搞怪",
+        "description": "生成带点无厘头气质的物品，适合派对游戏、即兴表演和短内容灵感。"
+      },
+      "ja": {
+        "name": "おもしろアイテム",
+        "shortName": "おもしろ",
+        "description": "少しシュールで楽しいアイテムをランダム生成。パーティーや即興ネタに向いています。"
+      }
+    }
   }
 ]

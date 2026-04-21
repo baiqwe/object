@@ -1,17 +1,14 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import { Layout } from '@/components/Layout'
 import { Metadata } from 'next'
-
-const inter = Inter({ subsets: ['latin'] })
-
+import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: {
-    default: 'GitBase',
-    template: '%s | GitBase'
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: 'Open source dynamic website without database, built with Next.js and GitHub API',
+  description: siteConfig.description,
 }
 
 interface RootLayoutProps {
@@ -21,7 +18,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Layout>{children}</Layout>
       </body>
     </html>
