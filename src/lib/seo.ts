@@ -8,6 +8,11 @@ type FaqItem = {
   answer: string
 }
 
+type BreadcrumbItem = {
+  label: string
+  href: string
+}
+
 function joinUrl(base: string, path: string) {
   return new URL(path, base).toString()
 }
@@ -50,6 +55,10 @@ export function createMetadata({
     alternates: {
       canonical: joinUrl(siteConfig.baseUrl, localizedPath),
       languages: buildAlternates(path).languages,
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
     openGraph: {
       title,
@@ -109,6 +118,25 @@ export function buildFaqJsonLd({
         '@type': 'Answer',
         text: faq.answer,
       },
+    })),
+  }
+}
+
+export function buildBreadcrumbJsonLd({
+  locale,
+  items,
+}: {
+  locale: Locale
+  items: BreadcrumbItem[]
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      item: joinUrl(siteConfig.baseUrl, getLocalizedPath(locale, item.href)),
     })),
   }
 }

@@ -4,7 +4,7 @@ import { getCategories, getCategoryPageSlug } from '@/lib/objects'
 import { siteConfig } from '@/lib/site-config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/random-object-generator']
+  const staticRoutes = ['', '/random-object-generator', '/about', '/privacy', '/terms']
   const categoryRoutes = getCategories().map((category) => `/${getCategoryPageSlug(category.slug)}`)
 
   return [...staticRoutes, ...categoryRoutes].flatMap((route) =>
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: new URL(locale === i18n.defaultLocale ? route || '/' : `/${locale}${route}`, siteConfig.baseUrl).toString(),
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: route === '' ? 1 : 0.8,
+      priority: route === '' ? 1 : route.startsWith('/random-') ? 0.8 : 0.5,
     }))
   )
 }

@@ -72,7 +72,15 @@ export default function LocalizedCategoryPage({
         items={getLocalizedObjects(params.lang, category.slug)}
         activeCategorySlug={category.slug}
       />
-      {translation.seo ? <CategoryLandingContent content={translation.seo} /> : null}
+      {translation.seo ? (
+        <CategoryLandingContent
+          locale={params.lang}
+          categoryName={translation.name}
+          categories={getLocalizedCategories(params.lang)}
+          currentSlug={category.slug}
+          content={translation.seo}
+        />
+      ) : null}
     </>
   )
 }

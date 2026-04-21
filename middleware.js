@@ -1,5 +1,13 @@
 import { NextResponse } from 'next/server';
 
+const locales = ['en', 'zh', 'ja'];
+
+function getLocaleFromPathname(pathname) {
+  const segments = pathname.split('/');
+  const candidate = segments[1];
+  return locales.includes(candidate) ? candidate : 'en';
+}
+
 export function middleware(request) {
   const pathname = request.nextUrl.pathname;
 
@@ -13,7 +21,14 @@ export function middleware(request) {
     return NextResponse.redirect(redirectUrl, { status: 301 });
   }
 
-  return NextResponse.next();
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-current-locale', getLocaleFromPathname(pathname));
+
+  return NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 }
 
 export const config = {

@@ -5,6 +5,8 @@ import { buildSoftwareApplicationJsonLd, getLocalizedPath } from '@/lib/seo'
 import type { LocalizedCategory, LocalizedObject } from '@/lib/objects'
 import { BulkGenerator } from '@/components/generators/BulkGenerator'
 import { VisualGenerator } from '@/components/generators/VisualGenerator'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { trustPageCopy } from '@/lib/site-copy'
 
 interface GeneratorShellProps {
   locale: Locale
@@ -42,10 +44,19 @@ export function GeneratorShell({
     path,
   })
 
+  const breadcrumbItems = activeCategorySlug
+    ? [
+        { label: trustPageCopy[locale].ui.breadcrumbHome, href: '/' },
+        { label: title, href: path },
+      ]
+    : null
+
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,_rgba(251,191,36,0.24),_transparent_35%),radial-gradient(circle_at_top_right,_rgba(45,212,191,0.25),_transparent_38%),linear-gradient(180deg,_#fffaf0_0%,_#ffffff_58%)]" />
       <div className="container mx-auto space-y-10 px-4 py-10 md:px-6 md:py-14">
+        {breadcrumbItems ? <Breadcrumbs locale={locale} items={breadcrumbItems} /> : null}
+
         <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div className="space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">{heroEyebrow}</p>

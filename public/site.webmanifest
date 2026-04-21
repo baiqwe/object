@@ -1,0 +1,9 @@
+{
+  "name": "Random Object Generator",
+  "short_name": "ROG",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#0f172a",
+  "description": "Generate random objects, animals, foods, and funny prompts in seconds."
+}

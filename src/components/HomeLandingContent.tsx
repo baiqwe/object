@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Locale } from '@/lib/i18n-config'
 import { buildFaqJsonLd, getLocalizedPath } from '@/lib/seo'
 import type { LocalizedCategory } from '@/lib/objects'
+import { trustPageCopy } from '@/lib/site-copy'
 
 interface HomeLandingContentProps {
   locale: Locale
@@ -21,8 +22,36 @@ interface HomeLandingContentProps {
   }
 }
 
+const howToHomeCopy = {
+  en: {
+    title: trustPageCopy.en.ui.howToUse,
+    steps: [
+      'Pick a category if you want a narrower result set, or stay on the homepage to generate from the full object pool.',
+      'Enter the amount you want to generate and choose whether repeated results should be allowed.',
+      'Use the visual cards for quick inspiration or switch to the bulk list when you need a copyable set for class, games, or writing.'
+    ],
+  },
+  zh: {
+    title: trustPageCopy.zh.ui.howToUse,
+    steps: [
+      '如果你想要更聚焦的结果，可以先进入某个分类页；如果想更宽泛地抽取，就留在首页。',
+      '输入你想生成的数量，并决定是否允许重复结果。',
+      '需要快速灵感时看卡片模式，需要整理成清单时直接使用批量模式复制结果。'
+    ],
+  },
+  ja: {
+    title: trustPageCopy.ja.ui.howToUse,
+    steps: [
+      'より絞った結果が欲しいならカテゴリページへ、幅広い結果が欲しいならトップページのまま使います。',
+      '生成したい数を入力し、重複を許可するかどうかを選びます。',
+      'すぐに発想が欲しいときはカード表示、一覧を使いたいときは一括モードを使います。'
+    ],
+  },
+}
+
 export function HomeLandingContent({ locale, categories, content }: HomeLandingContentProps) {
   const faqJsonLd = buildFaqJsonLd({ faqs: content.faqs })
+  const howTo = howToHomeCopy[locale]
 
   return (
     <>
@@ -41,6 +70,21 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">How to use</p>
+          <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{howTo.title}</h2>
+          <ol className="mt-6 space-y-4">
+            {howTo.steps.map((step, index) => (
+              <li key={step} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 text-sm leading-7 text-slate-700">
+                <span className="mr-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-950 text-xs font-semibold text-white">
+                  {index + 1}
+                </span>
+                {step}
+              </li>
+            ))}
+          </ol>
         </section>
 
         <section className="space-y-5">

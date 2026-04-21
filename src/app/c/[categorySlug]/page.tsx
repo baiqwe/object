@@ -59,7 +59,15 @@ export default function CategoryPage({ params }: { params: { categorySlug: strin
         items={getLocalizedObjects('en', category.slug)}
         activeCategorySlug={category.slug}
       />
-      {category.i18n.en.seo ? <CategoryLandingContent content={category.i18n.en.seo} /> : null}
+      {category.i18n.en.seo ? (
+        <CategoryLandingContent
+          locale="en"
+          categoryName={category.i18n.en.name}
+          categories={getLocalizedCategories('en')}
+          currentSlug={category.slug}
+          content={category.i18n.en.seo}
+        />
+      ) : null}
     </>
   )
 }
