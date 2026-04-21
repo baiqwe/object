@@ -31,14 +31,22 @@ interface VisualGeneratorProps {
 export function VisualGenerator({ items, title, description }: VisualGeneratorProps) {
   const [countInput, setCountInput] = useState('1')
   const [allowDuplicates, setAllowDuplicates] = useState(true)
-  const [seed, setSeed] = useState(0)
+  const [appliedCount, setAppliedCount] = useState(1)
+  const [appliedAllowDuplicates, setAppliedAllowDuplicates] = useState(true)
+  const [seed, setSeed] = useState(1)
   const count = Math.max(1, Math.min(100, Number.parseInt(countInput || '1', 10) || 1))
-  const visibleCount = allowDuplicates ? count : Math.min(count, items.length)
+  const visibleCount = appliedAllowDuplicates ? appliedCount : Math.min(appliedCount, items.length)
 
   const selection = useMemo(() => {
     void seed
-    return pickRandomItems(items, count, allowDuplicates)
-  }, [allowDuplicates, count, items, seed])
+    return pickRandomItems(items, appliedCount, appliedAllowDuplicates)
+  }, [appliedAllowDuplicates, appliedCount, items, seed])
+
+  function handleGenerate() {
+    setAppliedCount(count)
+    setAppliedAllowDuplicates(allowDuplicates)
+    setSeed((current) => current + 1)
+  }
 
   return (
     <section className="space-y-6">
@@ -75,7 +83,7 @@ export function VisualGenerator({ items, title, description }: VisualGeneratorPr
             {!allowDuplicates && count > items.length ? (
               <p className="text-xs text-slate-500">Limited to {items.length} unique items on this page.</p>
             ) : null}
-            <Button className="gap-2 rounded-full px-5" onClick={() => setSeed((current) => current + 1)}>
+            <Button className="gap-2 rounded-full px-5" onClick={handleGenerate}>
               <Shuffle className="h-4 w-4" />
               Generate
             </Button>

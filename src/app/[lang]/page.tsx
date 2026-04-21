@@ -6,29 +6,37 @@ import { GeneratorShell } from '@/components/generators/GeneratorShell'
 import { getLocalizedCategories, getLocalizedObjects } from '@/lib/objects'
 import { createMetadata } from '@/lib/seo'
 
+type LocalizedHomePageProps = {
+  params: Promise<{ lang: string }>
+}
+
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
-export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
-  const dict = await getDictionary(params.lang)
+export async function generateMetadata({ params }: LocalizedHomePageProps): Promise<Metadata> {
+  const { lang } = await params
+  const locale = (i18n.locales.includes(lang as Locale) ? lang : i18n.defaultLocale) as Locale
+  const dict = await getDictionary(locale)
 
   return createMetadata({
-    locale: params.lang,
+    locale,
     title: dict.home.seoTitle,
     description: dict.home.description,
     path: '/',
   })
 }
 
-export default async function Home({ params }: { params: { lang: Locale } }) {
-  const dict = await getDictionary(params.lang)
-  const categories = getLocalizedCategories(params.lang)
+export default async function Home({ params }: LocalizedHomePageProps) {
+  const { lang } = await params
+  const locale = (i18n.locales.includes(lang as Locale) ? lang : i18n.defaultLocale) as Locale
+  const dict = await getDictionary(locale)
+  const categories = getLocalizedCategories(locale)
 
   return (
     <>
       <GeneratorShell
-        locale={params.lang}
+        locale={locale}
         path="/"
         heroEyebrow={dict.home.eyebrow}
         title={dict.home.title}
@@ -38,9 +46,9 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
         bulkTitle={dict.home.bulkTitle}
         bulkDescription={dict.home.bulkDescription}
         categories={categories}
-        items={getLocalizedObjects(params.lang)}
+        items={getLocalizedObjects(locale)}
       />
-      <HomeLandingContent locale={params.lang} categories={categories} content={dict.home.landing} />
+      <HomeLandingContent locale={locale} categories={categories} content={dict.home.landing} />
     </>
   )
 }

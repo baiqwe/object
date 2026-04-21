@@ -5,20 +5,29 @@ import { ContentPageShell } from '@/components/ContentPageShell'
 import { createMetadata } from '@/lib/seo'
 import { trustPageCopy } from '@/lib/site-copy'
 
+type LocalizedPageProps = {
+  params: Promise<{ lang: string }>
+}
+
 export async function generateStaticParams() {
   return i18n.locales.map((lang) => ({ lang }))
 }
 
-export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
-  const content = trustPageCopy[params.lang].privacy
+export async function generateMetadata({ params }: LocalizedPageProps): Promise<Metadata> {
+  const { lang } = await params
+  const locale = (i18n.locales.includes(lang as Locale) ? lang : i18n.defaultLocale) as Locale
+  const content = trustPageCopy[locale].privacy
   return createMetadata({
-    locale: params.lang,
+    locale,
     title: content.title,
     description: content.description,
     path: '/privacy',
   })
 }
 
-export default function PrivacyLocalizedPage({ params }: { params: { lang: Locale } }) {
-  return <ContentPageShell locale={params.lang} slug="privacy" />
+export default async function PrivacyLocalizedPage({ params }: LocalizedPageProps) {
+  const { lang } = await params
+  const locale = (i18n.locales.includes(lang as Locale) ? lang : i18n.defaultLocale) as Locale
+
+  return <ContentPageShell locale={locale} slug="privacy" />
 }

@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Github } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import LanguageSuggestion from '@/components/LanguageSuggestion'
@@ -69,15 +68,6 @@ export function Navigation() {
           </div>
           <div className="flex items-center gap-4">
             <LanguageSwitcher currentLocale={currentLocale} />
-            <Link
-              href="https://github.com/baiqwe/GitBase"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-950"
-            >
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
-            </Link>
           </div>
         </div>
       </header>

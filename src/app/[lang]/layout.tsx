@@ -8,7 +8,7 @@ export default function LangLayout({
   children,
 }: {
   children: React.ReactNode
-  params: { lang: Locale }
+  params: Promise<{ lang: string }>
 }) {
   return children
 }

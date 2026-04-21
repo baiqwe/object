@@ -11,6 +11,10 @@ import {
 } from '@/lib/objects'
 import { createMetadata } from '@/lib/seo'
 
+type CategoryPageProps = {
+  params: Promise<{ categorySlug: string }>
+}
+
 export function generateStaticParams() {
   return getCategories().map((category) => ({
     categorySlug: category.slug,
@@ -19,10 +23,9 @@ export function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: {
-  params: { categorySlug: string }
-}): Promise<Metadata> {
-  const category = getCategoryBySlug(params.categorySlug)
+}: CategoryPageProps): Promise<Metadata> {
+  const { categorySlug } = await params
+  const category = getCategoryBySlug(categorySlug)
 
   if (!category) {
     return {}
@@ -36,8 +39,9 @@ export async function generateMetadata({
   })
 }
 
-export default function CategoryPage({ params }: { params: { categorySlug: string } }) {
-  const category = getCategoryBySlug(params.categorySlug)
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { categorySlug } = await params
+  const category = getCategoryBySlug(categorySlug)
 
   if (!category) {
     notFound()

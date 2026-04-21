@@ -13,6 +13,10 @@ import {
 } from '@/lib/objects'
 import { createMetadata } from '@/lib/seo'
 
+type LocalizedCategoryPageProps = {
+  params: Promise<{ lang: string; categorySlug: string }>
+}
+
 export function generateStaticParams() {
   return i18n.locales.flatMap((lang) =>
     getCategories().map((category) => ({
@@ -24,42 +28,42 @@ export function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: {
-  params: { lang: Locale; categorySlug: string }
-}): Promise<Metadata> {
-  const category = getCategoryBySlug(params.categorySlug)
+}: LocalizedCategoryPageProps): Promise<Metadata> {
+  const { lang, categorySlug } = await params
+  const locale = (i18n.locales.includes(lang as Locale) ? lang : i18n.defaultLocale) as Locale
+  const category = getCategoryBySlug(categorySlug)
 
   if (!category) {
     return {}
   }
 
-  const translation = category.i18n[params.lang] ?? category.i18n.en
+  const translation = category.i18n[locale] ?? category.i18n.en
 
   return createMetadata({
-    locale: params.lang,
+    locale,
     title: `${translation.name} Random Generator With Visual Cards`,
     description: translation.description,
     path: `/${getCategoryPageSlug(category.slug)}`,
   })
 }
 
-export default function LocalizedCategoryPage({
+export default async function LocalizedCategoryPage({
   params,
-}: {
-  params: { lang: Locale; categorySlug: string }
-}) {
-  const category = getCategoryBySlug(params.categorySlug)
+}: LocalizedCategoryPageProps) {
+  const { lang, categorySlug } = await params
+  const locale = (i18n.locales.includes(lang as Locale) ? lang : i18n.defaultLocale) as Locale
+  const category = getCategoryBySlug(categorySlug)
 
   if (!category) {
     notFound()
   }
 
-  const translation = category.i18n[params.lang] ?? category.i18n.en
+  const translation = category.i18n[locale] ?? category.i18n.en
 
   return (
     <>
       <GeneratorShell
-        locale={params.lang}
+        locale={locale}
         path={`/${getCategoryPageSlug(category.slug)}`}
         heroEyebrow={translation.shortName ?? translation.name}
         title={`${translation.name} Random Generator`}
@@ -68,15 +72,15 @@ export default function LocalizedCategoryPage({
         visualDescription={`Each click pulls a fresh ${translation.name.toLowerCase()} pick from the curated ${translation.name.toLowerCase()} set for this page.`}
         bulkTitle={`Build a quick ${translation.name.toLowerCase()} list`}
         bulkDescription={`Need a longer batch for writing sprints, classroom rounds, or improv games? Generate and copy a clean list in one tap.`}
-        categories={getLocalizedCategories(params.lang)}
-        items={getLocalizedObjects(params.lang, category.slug)}
+        categories={getLocalizedCategories(locale)}
+        items={getLocalizedObjects(locale, category.slug)}
         activeCategorySlug={category.slug}
       />
       {translation.seo ? (
         <CategoryLandingContent
-          locale={params.lang}
+          locale={locale}
           categoryName={translation.name}
-          categories={getLocalizedCategories(params.lang)}
+          categories={getLocalizedCategories(locale)}
           currentSlug={category.slug}
           content={translation.seo}
         />

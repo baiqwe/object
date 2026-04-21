@@ -29,8 +29,9 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
-  const currentLocale = headers().get('x-current-locale') || 'en'
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const requestHeaders = await headers()
+  const currentLocale = requestHeaders.get('x-current-locale') || 'en'
 
   return (
     <html lang={currentLocale}>
