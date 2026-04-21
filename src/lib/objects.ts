@@ -1,7 +1,7 @@
-import fs from 'fs'
-import path from 'path'
 import { cache } from 'react'
 import type { Locale } from '@/lib/i18n-config'
+import categoriesData from '../../data/json/categories.json'
+import objectsData from '../../data/json/objects.json'
 
 type SeoFaq = {
   question: string
@@ -54,16 +54,12 @@ export type LocalizedObject = ObjectRecord & {
   translation: LocalizedText
 }
 
-const dataPath = (...segments: string[]) => path.join(process.cwd(), 'data', 'json', ...segments)
-
 export const getCategories = cache((): CategoryRecord[] => {
-  const contents = fs.readFileSync(dataPath('categories.json'), 'utf8')
-  return JSON.parse(contents)
+  return categoriesData as CategoryRecord[]
 })
 
 export const getObjects = cache((): ObjectRecord[] => {
-  const contents = fs.readFileSync(dataPath('objects.json'), 'utf8')
-  return JSON.parse(contents)
+  return objectsData as ObjectRecord[]
 })
 
 export function getCategoryPageSlug(slug: string) {
