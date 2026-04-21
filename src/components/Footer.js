@@ -5,8 +5,9 @@ import { getLocalizedPath } from '@/lib/seo'
 import { siteConfig } from '@/lib/site-config'
 import { trustPageCopy } from '@/lib/site-copy'
 
-export function Footer() {
-  const locale = (headers().get('x-current-locale') || 'en')
+export async function Footer() {
+  const requestHeaders = await headers()
+  const locale = requestHeaders.get('x-current-locale') || 'en'
   const ui = trustPageCopy[locale].ui
   const categories = getLocalizedCategories(locale).slice(0, 4)
 
