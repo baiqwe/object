@@ -32,6 +32,11 @@ export const trustPageCopy: Record<
       relatedGenerators: string
       howToUse: string
       breadcrumbHome: string
+      featureRandomTitle: string
+      featureRandomBody: string
+      featureRandomValue: string
+      featureCopyTitle: string
+      featureCopyBody: string
     }
   }
 > = {
@@ -80,6 +85,11 @@ export const trustPageCopy: Record<
       relatedGenerators: 'Related generators',
       howToUse: 'How to use this generator',
       breadcrumbHome: 'Home',
+      featureRandomTitle: 'Random picks',
+      featureRandomBody: 'Generate a fresh object instantly for drawing prompts, games, warmups, or creative sprints.',
+      featureRandomValue: '1 click',
+      featureCopyTitle: 'Copy-ready lists',
+      featureCopyBody: 'Create a clean batch on the current page and copy it fast for docs, worksheets, or brainstorming.',
     },
   },
   zh: {
@@ -127,6 +137,11 @@ export const trustPageCopy: Record<
       relatedGenerators: '相关生成器',
       howToUse: '如何使用这个生成器',
       breadcrumbHome: '首页',
+      featureRandomTitle: '随机生成',
+      featureRandomBody: '一键刷新随机物品，适合绘画提示、课堂热身、小游戏和创意发散。',
+      featureRandomValue: '一键',
+      featureCopyTitle: '可复制清单',
+      featureCopyBody: '在当前页面快速生成一批结果，并直接复制到文档、教案、表格或脑暴清单里。',
     },
   },
   ja: {
@@ -174,6 +189,11 @@ export const trustPageCopy: Record<
       relatedGenerators: '関連ジェネレーター',
       howToUse: 'このジェネレーターの使い方',
       breadcrumbHome: 'ホーム',
+      featureRandomTitle: 'ランダム生成',
+      featureRandomBody: 'ワンクリックで新しいお題を出せるので、描画練習、授業導入、ゲーム、発想整理に使えます。',
+      featureRandomValue: '1クリック',
+      featureCopyTitle: 'コピーしやすい一覧',
+      featureCopyBody: 'このページ内で複数の結果をすばやく作成し、ドキュメントやワークシートへそのままコピーできます。',
     },
   },
 }

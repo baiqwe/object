@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { Locale } from '@/lib/i18n-config'
-import { i18n } from '@/lib/i18n-config'
 import { buildSoftwareApplicationJsonLd, getLocalizedPath } from '@/lib/seo'
 import type { LocalizedCategory, LocalizedObject } from '@/lib/objects'
 import { BulkGenerator } from '@/components/generators/BulkGenerator'
@@ -50,6 +49,7 @@ export function GeneratorShell({
         { label: title, href: path },
       ]
     : null
+  const ui = trustPageCopy[locale].ui
 
   return (
     <div className="relative overflow-hidden">
@@ -90,14 +90,14 @@ export function GeneratorShell({
           <div className="rounded-[2rem] border border-white/80 bg-white/80 p-6 shadow-[0_22px_80px_rgba(15,23,42,0.08)] backdrop-blur">
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-[1.5rem] bg-slate-950 p-5 text-white">
-                <p className="text-xs uppercase tracking-[0.25em] text-white/60">Locales</p>
-                <p className="mt-3 text-4xl font-semibold">{i18n.locales.length}</p>
-                <p className="mt-2 text-sm text-white/70">English, Chinese, and Japanese pages are generated up front.</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-white/60">{ui.featureRandomTitle}</p>
+                <p className="mt-3 text-4xl font-semibold">{ui.featureRandomValue}</p>
+                <p className="mt-2 text-sm text-white/70">{ui.featureRandomBody}</p>
               </div>
               <div className="rounded-[1.5rem] bg-gradient-to-br from-amber-100 to-rose-100 p-5 text-slate-900">
-                <p className="text-xs uppercase tracking-[0.25em] text-slate-500">Object pool</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-slate-500">{ui.featureCopyTitle}</p>
                 <p className="mt-3 text-4xl font-semibold">{items.length}</p>
-                <p className="mt-2 text-sm text-slate-600">The current page stays focused on a curated set, not thin programmatic filler.</p>
+                <p className="mt-2 text-sm text-slate-600">{ui.featureCopyBody}</p>
               </div>
             </div>
           </div>
