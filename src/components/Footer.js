@@ -1,13 +1,16 @@
+'use client'
+
 import Link from 'next/link'
-import { headers } from 'next/headers'
+import { usePathname } from 'next/navigation'
 import { getLocalizedCategories } from '@/lib/objects'
 import { getLocalizedPath } from '@/lib/seo'
+import { getLocaleFromPath, i18n } from '@/lib/i18n-config'
 import { siteConfig } from '@/lib/site-config'
 import { trustPageCopy } from '@/lib/site-copy'
 
-export async function Footer() {
-  const requestHeaders = await headers()
-  const locale = requestHeaders.get('x-current-locale') || 'en'
+export function Footer() {
+  const pathname = usePathname()
+  const locale = getLocaleFromPath(pathname) || i18n.defaultLocale
   const ui = trustPageCopy[locale].ui
   const categories = getLocalizedCategories(locale).slice(0, 4)
 

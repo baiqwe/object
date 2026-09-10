@@ -31,7 +31,7 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
     zh: {
       title: '随机动物生成器',
       description:
-        '抽取随机动物，适合绘画提示、你演我猜、课堂游戏、写作灵感和快速破冰。',
+        '抽取随机动物，可用于绘画题、你演我猜、课堂游戏、写作灵感和快速破冰。',
       visualTitle: '抽一个随机动物',
       visualDescription:
         '当你需要动物绘画题、猜词游戏、英语词汇练习或故事灵感时，可以直接使用这个动物专属生成器。',
@@ -40,7 +40,7 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
         '批量生成可复制的动物提示词，适合教案、游戏轮次、绘画练习和写作训练。',
       seoTitle: '随机动物生成器：抽取动物卡片与批量清单',
       seoDescription:
-        '抽取随机动物或批量生成动物清单，适合绘画提示、你演我猜、英语课堂、少儿游戏和故事创作。',
+        '抽取随机动物或批量生成动物清单，可用于绘画练习、你演我猜、英语课堂、少儿游戏和故事创作。',
     },
     ja: {
       title: 'ランダム動物ジェネレーター',
@@ -75,7 +75,7 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
     zh: {
       title: '随机食物生成器',
       description:
-        '抽取随机食物，适合绘画提示、课堂游戏、菜单命名、聚会题卡和创意练习。',
+        '抽取随机食物，可用于绘画题、课堂游戏、菜单命名、聚会题卡和创意练习。',
       visualTitle: '抽一个随机食物',
       visualDescription:
         '当你需要食物绘画题、课堂词汇、游戏灵感或菜单发想时，可以直接使用这个食物生成器。',
@@ -84,7 +84,7 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
         '批量生成可复制的食物提示词，适合课件、游戏题卡、菜单命名和绘画练习。',
       seoTitle: '随机食物生成器：抽取食物卡片与批量清单',
       seoDescription:
-        '抽取随机食物或批量生成食物清单，适合绘画提示、英语课堂、聚会游戏、菜单命名和创意活动。',
+        '抽取随机食物或批量生成食物清单，可用于绘画练习、英语课堂、聚会游戏、菜单命名和创意活动。',
     },
     ja: {
       title: 'ランダム食べ物ジェネレーター',

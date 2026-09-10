@@ -3385,7 +3385,7 @@ const baseIntentPages: IntentPageConfig[] = [
         heroEyebrow: '可复制清单',
         title: '随机物品清单生成器',
         description:
-          '生成随机物品清单，适合绘画提示、课堂活动、你演我猜、写作和快速脑暴。',
+          '生成随机物品清单，可用于绘画题、课堂活动、你演我猜、写作和快速脑暴。',
         visualTitle: '先预览物品卡片',
         visualDescription:
           '生成清单前，可以先用卡片看对象组合是否适合你的活动。',

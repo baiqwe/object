@@ -160,6 +160,115 @@ const editorialPromiseCopy = {
   },
 }
 
+function buildActivityBlueprintCopy({
+  locale,
+  pageTitle,
+  sampleItems,
+}: {
+  locale: Locale
+  pageTitle: string
+  sampleItems: LocalizedObject[]
+}) {
+  const names = sampleItems.slice(0, 8).map((item) => item.translation.name)
+  const firstSet = names.slice(0, 4).join(locale === 'en' ? ', ' : '、')
+  const secondSet = names.slice(4, 8).join(locale === 'en' ? ', ' : '、')
+
+  const copy = {
+    en: {
+      eyebrow: 'Ready-made content',
+      title: `Three complete ways to use ${pageTitle.toLowerCase()}`,
+      lead:
+        `A generator page is more useful when the result becomes a finished activity. These formats turn objects such as ${firstSet || 'everyday items'} into repeatable classroom, drawing, game, and writing workflows.`,
+      cards: [
+        {
+          title: '10-minute warmup',
+          body:
+            `Generate five objects, put them on a board, and ask each participant to choose one. For prompts such as ${firstSet || 'the first four objects'}, the follow-up questions are: what does it look like, where would you find it, what action belongs with it, and what detail would make it memorable? This gives the page original instructional value instead of only displaying random nouns.`,
+        },
+        {
+          title: 'Copyable challenge set',
+          body:
+            `Use bulk mode to make a 12-item list, then divide it into three short rounds: describe, draw, and remix. A list containing ${secondSet || 'mixed objects'} can become a worksheet, slide, party deck, or writing sprint without needing another tool. Keeping the structure on the page also helps visitors understand why the generated list is worth saving.`,
+        },
+        {
+          title: 'Review and moderation rule',
+          body:
+            'Before using a generated list with children, classrooms, ads, or public pages, scan the objects for age fit, cultural context, and image clarity. Remove anything that does not match the audience. This site is maintained around concrete, low-risk objects, and the final activity owner should still review each generated batch before publishing or monetizing it.',
+        },
+      ],
+      checklistTitle: 'Quality checklist for this page',
+      checklist: [
+        'The page has crawlable explanatory text before and after the generator.',
+        'Examples use the same object pool that visitors can actually generate.',
+        'The content gives a finished activity format, not only a list of keywords.',
+        'Ads and analytics remain separate from the generator controls and copy buttons.',
+      ],
+    },
+    zh: {
+      eyebrow: '成型内容',
+      title: `${pageTitle} 的三种完整用法`,
+      lead:
+        `生成器页面不能只停在“吐出几个词”。下面这些用法会把 ${firstSet || '日常物品'} 这类结果转化为课堂、绘画、游戏和写作里可以直接执行的流程。`,
+      cards: [
+        {
+          title: '10 分钟热身',
+          body:
+            `先生成 5 个物品，把结果放到白板或屏幕上，每个人选一个。遇到 ${firstSet || '前几个物品'} 这类提示时，可以追问：它长什么样、通常在哪里出现、可以配什么动作、哪个细节最容易让人记住。这样页面提供的是活动方法，而不是一堆随机名词。`,
+        },
+        {
+          title: '可复制挑战清单',
+          body:
+            `用批量模式生成 12 个物品，再拆成三轮：描述、绘画、改编。包含 ${secondSet || '混合物品'} 的清单可以直接变成 worksheet、课件、聚会题卡或写作冲刺题，不需要再跳到别的工具整理。`,
+        },
+        {
+          title: '人工复核规则',
+          body:
+            '如果要把清单用于儿童、课堂、广告页面或公开内容，发布前应检查年龄适配、文化语境和图片清晰度，删掉不适合当前受众的结果。本站对象池以具体、低风险物品为主，但最终活动仍应由使用者复核。',
+        },
+      ],
+      checklistTitle: '本页内容质量核对',
+      checklist: [
+        '生成器前后都有可抓取、可阅读的解释内容。',
+        '示例来自真实对象池，用户确实可以生成同类结果。',
+        '正文提供完整活动流程，而不只是关键词列表。',
+        '广告和统计脚本与生成器控件、复制按钮保持清晰区分。',
+      ],
+    },
+    ja: {
+      eyebrow: '完成した使い方',
+      title: `${pageTitle} の3つの使い方`,
+      lead:
+        `ジェネレーターページは、単語を出すだけでは不十分です。${firstSet || '日常的な対象'} のような結果を、授業、描画、ゲーム、文章づくりに使える流れへ変えることが大切です。`,
+      cards: [
+        {
+          title: '10分ウォームアップ',
+          body:
+            `まず5つ生成し、参加者が1つ選びます。${firstSet || '最初のいくつかの対象'} のようなお題では、形、置かれる場所、合う動き、記憶に残る細部を質問します。これにより、ページは単なるランダム名詞ではなく活動手順を提供できます。`,
+        },
+        {
+          title: 'コピーできる課題セット',
+          body:
+            `一括モードで12個作り、説明、描画、アレンジの3ラウンドに分けます。${secondSet || 'さまざまな対象'} を含むリストは、ワークシート、スライド、ゲームカード、短い文章練習にそのまま使えます。`,
+        },
+        {
+          title: '確認ルール',
+          body:
+            '子ども、授業、広告付きページ、公開コンテンツで使う場合は、年齢適性、文化的文脈、画像の分かりやすさを確認し、合わないものを外してください。このサイトは具体的で低リスクな対象を中心にしていますが、公開前の確認は利用者側でも必要です。',
+        },
+      ],
+      checklistTitle: 'このページの品質チェック',
+      checklist: [
+        'ジェネレーターの前後にクロール可能な説明文がある。',
+        '例は実際に生成できる対象プールから出している。',
+        '本文はキーワード一覧ではなく、活動として使える形式になっている。',
+        '広告と分析は、生成ボタンやコピー操作と明確に分けている。',
+      ],
+    },
+  }[locale]
+
+  return copy
+}
+
 export function HomeLandingContent({
   locale,
   categories,
@@ -175,6 +284,11 @@ export function HomeLandingContent({
   const library = libraryCopy[locale]
   const imageCount = sampleItems.filter((item) => Boolean(item.image)).length
   const editorialPromise = editorialPromiseCopy[locale]
+  const activityBlueprint = buildActivityBlueprintCopy({
+    locale,
+    pageTitle: content.introTitle,
+    sampleItems,
+  })
   const exampleCopy = {
     en: {
       title: 'Example objects you can pull from this page',
@@ -367,6 +481,30 @@ export function HomeLandingContent({
           lead={exampleContent?.lead ?? exampleCopy.lead}
           items={sampleItems.slice(0, 6)}
         />
+
+        <section className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{activityBlueprint.eyebrow}</p>
+          <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{activityBlueprint.title}</h2>
+          <p className="mt-4 max-w-4xl text-base leading-8 text-slate-600">{activityBlueprint.lead}</p>
+          <div className="mt-6 grid gap-4 lg:grid-cols-3">
+            {activityBlueprint.cards.map((card) => (
+              <article key={card.title} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <h3 className="text-xl text-slate-950">{card.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{card.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-6 rounded-[1.5rem] border border-slate-200 bg-white p-5">
+            <h3 className="text-xl text-slate-950">{activityBlueprint.checklistTitle}</h3>
+            <ul className="mt-4 grid gap-3 md:grid-cols-2">
+              {activityBlueprint.checklist.map((item) => (
+                <li key={item} className="text-sm leading-6 text-slate-600">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
         <EditorialLinksSection locale={locale} links={editorialLinks ?? []} />
         <TrustBlockSection locale={locale} block={trustBlock} />
       </div>

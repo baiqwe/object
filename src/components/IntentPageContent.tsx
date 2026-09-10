@@ -24,6 +24,13 @@ export function IntentPageContent({ locale, path, intentPage }: IntentPageConten
   const items = getLocalizedObjectsByCategories(locale, intentPage.categories)
   const sampleItems = buildSampleItems(items, intentPage.exampleObjectIds)
   const featuredItems = buildFeaturedItems(categories, items)
+  const landingContent = withAuditDepthContent({
+    locale,
+    title: copy.title,
+    content: copy.landing,
+    categories,
+    sampleItems,
+  })
   const editorialLinks = getLocalizedIntentLinks(locale)
     .filter((link) => link.href !== path)
     .filter((link) => intentPage.categories.some((category) => link.categories.includes(category)))
@@ -90,10 +97,108 @@ export function IntentPageContent({ locale, path, intentPage }: IntentPageConten
         editorialLinks={editorialLinks}
         exampleContent={copy.examples}
         trustBlock={trustBlock}
-        content={copy.landing}
+        content={landingContent}
       />
     </>
   )
+}
+
+function withAuditDepthContent({
+  locale,
+  title,
+  content,
+  categories,
+  sampleItems,
+}: {
+  locale: Locale
+  title: string
+  content: IntentPageConfig['i18n'][Locale]['landing']
+  categories: LocalizedCategory[]
+  sampleItems: ReturnType<typeof getLocalizedObjectsByCategories>
+}) {
+  const categoryNames = categories.map((category) => category.translation.name).slice(0, 4)
+  const objectNames = sampleItems.map((item) => item.translation.name).slice(0, 6)
+  const categoryList = joinLocalizedList(categoryNames, locale)
+  const objectList = joinLocalizedList(objectNames, locale)
+
+  const defaults = {
+    en: {
+      intentTitle: `How ${title} is different from a generic random word page`,
+      intentBody:
+        `${title} narrows the generator around ${categoryList || 'focused object categories'} so the page can serve a specific visitor task instead of acting like a doorway page. The examples, generator defaults, internal links, and FAQ are meant to help someone use the result immediately.`,
+      intentBullets: [
+        `Representative prompts include ${objectList || 'recognizable everyday objects'}.`,
+        'The page keeps the generator visible first, then adds explanatory content for users who need context.',
+        'Related pages and category links give visitors a next step without forcing them through irrelevant navigation.',
+      ],
+      qualityTitle: `Quality checks behind this ${title} page`,
+      qualityBody:
+        'Before a page like this is indexed, it should have a usable generator, crawlable text, examples, internal links, and clear trust pages. That combination helps separate the page from thin keyword variants and gives both visitors and reviewers a reason to keep it live.',
+      qualityBullets: [
+        'The object pool is constrained by use case, not filled with unrelated nouns.',
+        'Examples are drawn from the same data used by the generator, so the page describes real results.',
+        'The page avoids ad-heavy or affiliate-first blocks and keeps the main utility easy to reach.',
+      ],
+    },
+    zh: {
+      intentTitle: `${title} 和普通随机词页面有什么区别`,
+      intentBody:
+        `${title} 会围绕 ${categoryList || '更明确的物品分类'} 收窄对象池，让页面服务一个具体任务，而不是做成只有标题不同的入口页。示例、默认生成数量、内链和 FAQ 都是为了让用户能马上把结果用起来。`,
+      intentBullets: [
+        `代表性结果包括 ${objectList || '可识别的日常物品'}。`,
+        '页面先让生成器可用，再补充解释内容，避免正文压住核心功能。',
+        '相关页面和分类链接提供下一步，不把用户带进无关路径。',
+      ],
+      qualityTitle: `${title} 的内容质量检查`,
+      qualityBody:
+        '一个适合被索引的专题页，至少应该同时具备可用工具、可抓取正文、真实示例、站内链接和信任页面。这样页面才不只是关键词变体，而是对用户和审核者都有明确价值。',
+      qualityBullets: [
+        '对象池按使用场景收窄，而不是混入无关名词。',
+        '示例来自真实生成数据，页面描述和实际结果一致。',
+        '页面避免广告或联盟内容优先，核心工具始终容易访问。',
+      ],
+    },
+    ja: {
+      intentTitle: `${title} が一般的なランダム単語ページと違う点`,
+      intentBody:
+        `${title} は ${categoryList || '用途に合うカテゴリ'} を中心に対象を絞り、単なる入口ページではなく具体的な作業に使えるページとして作られています。例、初期設定、内部リンク、FAQ は、結果をすぐ使えるようにするためのものです。`,
+      intentBullets: [
+        `代表的な結果には ${objectList || '認識しやすい日常物'} があります。`,
+        'まずジェネレーターを使える状態にし、その後に文脈説明を置いています。',
+        '関連ページとカテゴリリンクで、近い目的にも自然につながります。',
+      ],
+      qualityTitle: `${title} ページの品質チェック`,
+      qualityBody:
+        'インデックス対象にするページには、使えるツール、クロール可能な本文、実例、内部リンク、信頼ページへの導線が必要です。この組み合わせにより、単なるキーワード違いの薄いページではなく、訪問者にも審査者にも意味のあるページになります。',
+      qualityBullets: [
+        '対象プールは用途で絞り込み、無関係な名詞を混ぜません。',
+        '例は実際の生成データから出しているため、説明と結果が一致します。',
+        '広告やアフィリエイトを優先せず、主要機能にすぐ到達できます。',
+      ],
+    },
+  }[locale]
+
+  return {
+    ...content,
+    intentTitle: content.intentTitle ?? defaults.intentTitle,
+    intentBody: content.intentBody ?? defaults.intentBody,
+    intentBullets: content.intentBullets ?? defaults.intentBullets,
+    qualityTitle: content.qualityTitle ?? defaults.qualityTitle,
+    qualityBody: content.qualityBody ?? defaults.qualityBody,
+    qualityBullets: content.qualityBullets ?? defaults.qualityBullets,
+  }
+}
+
+function joinLocalizedList(items: string[], locale: Locale) {
+  if (items.length === 0) {
+    return ''
+  }
+
+  if (locale === 'en') {
+    return new Intl.ListFormat('en', { style: 'long', type: 'conjunction' }).format(items)
+  }
+
+  return items.join(locale === 'ja' ? '、' : '、')
 }
 
 function buildSampleItems(

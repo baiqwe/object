@@ -22,6 +22,8 @@
 - [x] About 补充维护主体、更新依据和公开反馈路径。
 - [x] Privacy 补充 Cloudflare、GA4 和未来 AdSense Cookie 说明。
 - [x] Terms 补充生成内容的使用边界。
+- [x] 新增 Cookie/Consent 提示，默认拒绝非必要 Google 存储，用户接受后才加载 GA4 与 AdSense。
+- [x] 默认关闭 Google ad personalization 与 ad user data consent，降低儿童页和 EEA/UK 审核风险。
 
 复审前检查点：
 
@@ -50,6 +52,7 @@
 - [x] 每个页面的示例对象不是机械复用同一批。
 - [x] 内链至少指向相关分类、专题页和信任页。
 - [x] FAQ 内容回答真实问题，避免关键词堆砌。
+- [x] 给 intent 页面统一补充“用途边界 / 内容质量检查”深度模块，降低批量模板页风险。
 
 ## 阶段三：对象库与图片层
 
@@ -84,8 +87,9 @@
 
 检查点：
 
-- [ ] 检查生产环境 `cache-control`，避免核心静态页长期 `no-store`。
-- [ ] 评估是否保留动态 `<html lang>`，或改成更静态友好的多语言结构。
+- [x] 添加 CDN 友好的 `cache-control`，核心页面使用 `s-maxage=86400`，robots/sitemap/ads.txt 使用浏览器 1 小时与 CDN 1 天缓存。
+- [x] 移除根布局和 Footer 的请求头语言读取，让英文核心路由重新静态预渲染。
+- [x] 修复首屏随机结果的 hydration mismatch，改为 seed 驱动的确定性初始结果。
 - [ ] 用 Lighthouse / PageSpeed 测首页和核心专题页的 LCP、CLS、INP。
 - [x] 图片规模扩大后，改用 R2 自定义域名，并记录缓存命中率。
 - [ ] 在 Cloudflare 后台给 `cdn.randomobject.co/images/*` 配置长缓存规则。

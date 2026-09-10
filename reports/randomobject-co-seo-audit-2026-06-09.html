@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>randomobject.co SEO Audit - 2026-06-09</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f6f7f9;color:#172033;line-height:1.65}main{max-width:1040px;margin:0 auto;padding:32px 20px}section{background:white;border:1px solid #e5e7eb;border-radius:8px;margin:16px 0;padding:20px}h1{font-size:28px}h2{font-size:18px;color:#0f4c81}.pass{color:#137333;font-weight:700}.warn{color:#a15c00;font-weight:700}table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px solid #edf0f3;padding:8px;text-align:left;vertical-align:top}code{background:#f1f5f9;padding:2px 5px;border-radius:4px}.small{color:#64748b;font-size:13px}</style>
+</head>
+<body><main>
+<h1>randomobject.co SEO Audit - 2026-06-09</h1>
+<p class="small">Scope: local production build at <code>localhost:3302</code> plus live baseline via seo-audit scripts for <code>https://randomobject.co</code>.</p>
+<section><h2>Executive Summary</h2>
+<p><span class="pass">PASS</span> 当前未上线构建通过了页面级 SEO 检查：title/meta/H1/canonical/robots/hreflang/breadcrumb JSON-LD/FAQ JSON-LD/SoftwareApplication JSON-LD/internal links/trust links/favicon manifest。</p>
+<p><span class="warn">NOTE</span> Moz 原始页面在当前浏览工具中不可直接打开；本次按其 quick-start 可见摘要中的 title、meta、URL、breadcrumb、internal links 等基础项，并以 Google Search Central 官方文档作为硬标准复核。</p>
+</section>
+<section><h2>Checked Pages</h2>
+<table><thead><tr><th>Page</th><th>Status</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>/</td><td class="pass">PASS</td><td>Title 60 chars, canonical https://randomobject.co, robots index/follow, FAQ + SoftwareApplication schema, 22 internal links.</td></tr>
+<tr><td>/random-animals-generator</td><td class="pass">PASS</td><td>Title "Random Animal Generator | Random Object Generator", canonical self, breadcrumb + FAQ + SoftwareApplication schema, 14 internal links.</td></tr>
+<tr><td>/random-food-generator</td><td class="pass">PASS</td><td>Title "Random Food Generator | Random Object Generator", canonical self, breadcrumb + FAQ + SoftwareApplication schema, 14 internal links.</td></tr>
+<tr><td>/random-kitchen-objects</td><td class="pass">PASS</td><td>Title "Random Kitchen Objects Generator | Random Object Generator", canonical self, breadcrumb + FAQ + SoftwareApplication schema, 16 internal links.</td></tr>
+<tr><td>/zh</td><td class="pass">PASS</td><td>Title covers 简体/繁体 keyword, canonical https://randomobject.co/zh, FAQ covers "random object 是什么意思" and "隨機物品產生器".</td></tr>
+<tr><td>Trust pages</td><td class="pass">PASS</td><td>/about, /privacy, /terms, /contact, /editorial-policy each has one H1, self canonical, index/follow, hreflang, breadcrumbs, and trust links.</td></tr>
+</tbody></table>
+</section>
+<section><h2>Site-Level Checks</h2>
+<table><tbody>
+<tr><td>robots.txt</td><td class="pass">PASS</td><td>Allows site, blocks /api/ and query URLs, includes sitemap directive.</td></tr>
+<tr><td>sitemap.xml</td><td class="pass">PASS</td><td>87 URLs, includes target pretty URLs and localized URLs.</td></tr>
+<tr><td>favicon / manifest</td><td class="pass">PASS</td><td>public contains favicon.ico, favicon.svg, 96x96 PNG, apple-touch-icon 180x180, 192/512 manifest icons.</td></tr>
+<tr><td>Canonical / hreflang</td><td class="pass">PASS</td><td>Self-canonical URLs, /c/category redirects to pretty URLs, pretty URLs rewrite internally, 4 hreflang links on checked pages.</td></tr>
+<tr><td>Internal links</td><td class="pass">PASS</td><td>Navigation, footer, category links, related generators, and editorial links connect important pages; no target page appears orphaned.</td></tr>
+</tbody></table>
+</section>
+<section><h2>seo-audit Script Baseline</h2>
+<p>Live site robots and sitemap pass. Live animal page warnings are addressed by this local build: H1/title changed from "Animals Random Generator..." to "Random Animal Generator" and title shortened. Live Chinese page meta warning is addressed by this local build with added keyword coverage and FAQ.</p>
+</section>
+</main></body></html>

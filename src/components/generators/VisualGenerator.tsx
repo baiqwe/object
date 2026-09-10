@@ -10,15 +10,29 @@ import type { Locale } from '@/lib/i18n-config'
 import type { LocalizedObject } from '@/lib/objects'
 import { trustPageCopy } from '@/lib/site-copy'
 
-function pickRandomItems<T>(items: T[], count: number, allowDuplicates: boolean) {
+function seededRandom(seed: number) {
+  let value = seed % 2147483647
+  if (value <= 0) {
+    value += 2147483646
+  }
+
+  return () => {
+    value = (value * 16807) % 2147483647
+    return (value - 1) / 2147483646
+  }
+}
+
+function pickRandomItems<T>(items: T[], count: number, allowDuplicates: boolean, seed: number) {
+  const random = seededRandom(seed)
+
   if (allowDuplicates) {
-    return Array.from({ length: Math.max(0, count) }, () => items[Math.floor(Math.random() * items.length)])
+    return Array.from({ length: Math.max(0, count) }, () => items[Math.floor(random() * items.length)])
   }
 
   const shuffled = [...items]
 
   for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1))
+    const swapIndex = Math.floor(random() * (index + 1))
     ;[shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]]
   }
 
@@ -69,9 +83,9 @@ export function VisualGenerator({
 
       const missingCount = appliedCount - seededItems.length
       const remainingPool = items.filter((item) => !seededItems.some((featured) => featured.id === item.id))
-      return [...seededItems, ...pickRandomItems(remainingPool, missingCount, appliedAllowDuplicates)]
+      return [...seededItems, ...pickRandomItems(remainingPool, missingCount, appliedAllowDuplicates, seed)]
     }
-    return pickRandomItems(items, appliedCount, appliedAllowDuplicates)
+    return pickRandomItems(items, appliedCount, appliedAllowDuplicates, seed)
   }, [appliedAllowDuplicates, appliedCount, featuredItems, items, seed])
 
   function handleGenerate() {

@@ -95,6 +95,7 @@ export const trustPageCopy: Record<
         'Like most websites, the service may collect basic technical data such as server logs, page requests, device and browser information, referrer data, and anonymous usage events. At the time of writing, the product uses Cloudflare for delivery and Google Analytics 4 for basic measurement, which helps the project understand page performance, click behavior, and which pages are actually useful to visitors.',
         'The purpose of this data handling is operational: keep the service stable, improve page quality, measure feature adoption, and identify which search-oriented pages satisfy user intent. The site is not designed as a personal profile system, and the core generator can be used without creating an account or providing a name.',
         'The site uses Google AdSense to request and display advertising. Third-party vendors, including Google, may use cookies or similar technologies to serve ads based on a user’s prior visits to this website or to other websites. Google’s use of advertising cookies enables Google and its partners to serve ads to visitors based on visits to this site and other sites on the Internet.',
+        'The site shows a cookie choice banner before non-essential Google advertising or analytics storage is granted. If you decline, the core generator remains available, but advertising and analytics storage stay disabled for that browser until you change or clear your local browser preferences. The current implementation keeps Google ad personalization and ad user data consent disabled by default.',
         'Users may opt out of personalized advertising by visiting Google Ads Settings at https://www.google.com/settings/ads. Visitors may also learn more about third-party advertising choices at https://www.aboutads.info. If additional advertising vendors or ad networks are used, this policy should be updated with the relevant vendor information and opt-out links.',
         'If the site later introduces additional third-party services such as email capture, account features, or richer analytics, this page should be updated so the policy reflects the live production setup. For questions, corrections, or privacy-related concerns, the public repository issue tracker and contact email are the clearest contact routes.'
       ],
@@ -217,6 +218,7 @@ export const trustPageCopy: Record<
         '和大多数网站一样，为了保障稳定性、改进体验以及了解页面使用情况，系统可能会记录基础技术数据，例如服务日志、页面请求、设备与浏览器信息、来源信息以及匿名化的交互事件。当前站点部署在 Cloudflare 环境中，并使用 Google Analytics 4 做基础访问与行为统计。',
         '这些技术数据的用途主要是运维和改进产品，例如判断页面是否正常工作、哪些页面点击率更高、哪些生成器被真正使用，以及哪些专题页需要继续优化，而不是建立用户画像或要求用户先交出身份信息。',
         '本站已接入 Google AdSense 用于请求和展示广告。包括 Google 在内的第三方供应商可能会使用 Cookie 或类似技术，根据用户此前访问本站或其他网站的情况投放广告。Google 使用广告 Cookie 后，可以让 Google 及其合作伙伴基于用户对本站和互联网上其他网站的访问情况展示广告。',
+        '本站会在授予非必要 Google 广告或统计存储权限前显示 Cookie 选择提示。如果你选择拒绝，核心随机生成器仍可正常使用，但该浏览器中的广告和统计存储会保持关闭，直到你修改或清除本地浏览器偏好。当前实现默认不授予 Google 个性化广告和广告用户数据权限。',
         '用户可以访问 Google Ads Settings（https://www.google.com/settings/ads）退出个性化广告。访客也可以通过 https://www.aboutads.info 了解更多第三方广告选择。如果本站未来使用更多广告供应商或广告网络，本政策应继续补充相关供应商信息和退出链接。',
         '如果未来站点接入更多第三方服务，例如邮件订阅、账号功能或更复杂的统计方案，本页面应同步更新为真实运行状态。若你认为隐私描述与实际行为不一致，当前推荐通过公开 issue 或联系邮箱提出反馈。'
       ],
@@ -274,7 +276,7 @@ export const trustPageCopy: Record<
       howToUse: '如何使用这个生成器',
       breadcrumbHome: '首页',
       featureRandomTitle: '随机生成',
-      featureRandomBody: '一键刷新随机物品，适合绘画提示、课堂热身、小游戏和创意发散。',
+      featureRandomBody: '一键刷新随机物品，可用于绘画题、课堂热身、小游戏和创意发散。',
       featureRandomValue: '一键',
       featureCopyTitle: '可复制清单',
       featureCopyBody: '在当前页面快速生成一批结果，并直接复制到文档、教案、表格或脑暴清单里。',
@@ -339,6 +341,7 @@ export const trustPageCopy: Record<
         '多くのウェブサイトと同様に、安定運用、使い勝手の改善、どのページが使われているかの把握のために、基本的な技術データが記録される場合があります。これには、サーバーログ、ページリクエスト、端末やブラウザ情報、参照元、匿名の利用イベントなどが含まれます。現在のサイトは Cloudflare 環境で配信され、Google Analytics 4 を用いて基礎的なアクセス計測を行っています。',
         'こうしたデータ処理の目的は、サービスを安定させ、役に立つページを判断し、ジェネレーターや導線の改善点を見つけることです。ユーザーアカウントを作らせたり、個人プロフィールを構築したりするための設計ではありません。',
         'このサイトでは、広告のリクエストと表示のために Google AdSense を利用しています。Google を含む第三者ベンダーは、ユーザーがこのサイトまたは他のウェブサイトを過去に訪問した情報に基づいて広告を配信するため、Cookie または類似技術を使用する場合があります。Google の広告 Cookie により、Google とそのパートナーは、このサイトおよびインターネット上の他サイトへの訪問に基づく広告を表示できます。',
+        'このサイトでは、必須ではない Google 広告または解析ストレージを有効にする前に Cookie 選択バナーを表示します。拒否した場合でもコアのジェネレーターは利用できますが、そのブラウザでは広告と解析ストレージが無効のままになります。現在の実装では、Google の広告パーソナライズと広告ユーザーデータの同意は初期状態で無効のままです。',
         'ユーザーは Google Ads Settings（https://www.google.com/settings/ads）でパーソナライズ広告を無効にできます。また、https://www.aboutads.info で第三者広告に関する選択肢を確認できます。今後、追加の広告ベンダーまたは広告ネットワークを使用する場合は、関連するベンダー情報とオプトアウト方法をこのポリシーに追記します。',
         '将来、メール購読、アカウント機能、追加の解析ツールなど別の第三者サービスを導入する場合は、このページを更新して実際の本番構成と一致させるべきです。説明と実態に差があると思われる場合は、公開 issue または連絡先メールを通じて知らせてください。'
       ],

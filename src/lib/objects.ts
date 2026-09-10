@@ -6,6 +6,7 @@ import objectsExtraData from '../../data/json/objects-extra.json'
 import objectsExpandedData from '../../data/json/objects-expanded.json'
 import objectImageMetaData from '../../data/json/object-image-meta.json'
 import { siteConfig } from '@/lib/site-config'
+import { enrichObjectDescription } from '@/lib/object-copy-enrichment'
 
 type SeoFaq = {
   question: string
@@ -208,9 +209,25 @@ export function localizeCategory(category: CategoryRecord, locale: Locale): Loca
 }
 
 export function localizeObject(item: ObjectRecord, locale: Locale): LocalizedObject {
+  const translation = item.i18n[locale] ?? item.i18n.en
+  const enrichedI18n = (Object.entries(item.i18n) as Array<[Locale, LocalizedText]>).reduce(
+    (result, [entryLocale, entryTranslation]) => {
+      result[entryLocale] = {
+        ...entryTranslation,
+        description: enrichObjectDescription(item, entryLocale, entryTranslation.description),
+      }
+      return result
+    },
+    {} as Record<Locale, LocalizedText>
+  )
+
   return {
     ...item,
-    translation: item.i18n[locale] ?? item.i18n.en,
+    i18n: enrichedI18n,
+    translation: {
+      ...translation,
+      description: enrichObjectDescription(item, locale, translation.description),
+    },
     imageAltText:
       item.imageAlt?.[locale] ??
       item.imageAlt?.en ??

@@ -16,11 +16,24 @@ declare global {
   }
 }
 
-function pickRandomItems<T>(items: T[], count: number) {
+function seededRandom(seed: number) {
+  let value = seed % 2147483647
+  if (value <= 0) {
+    value += 2147483646
+  }
+
+  return () => {
+    value = (value * 16807) % 2147483647
+    return (value - 1) / 2147483646
+  }
+}
+
+function pickRandomItems<T>(items: T[], count: number, seed: number) {
   const result: T[] = []
+  const random = seededRandom(seed)
 
   while (result.length < count && items.length > 0) {
-    result.push(items[Math.floor(Math.random() * items.length)])
+    result.push(items[Math.floor(random() * items.length)])
   }
 
   return result
@@ -41,8 +54,7 @@ export function BulkGenerator({ locale, items, heading, helperText }: BulkGenera
 
   const count = Math.max(1, Math.min(100, Number.parseInt(countInput || '10', 10) || 10))
   const rows = useMemo(() => {
-    void seed
-    return pickRandomItems(items, count)
+    return pickRandomItems(items, count, seed + 1)
   }, [count, items, seed])
 
   async function handleCopy() {

@@ -1,8 +1,7 @@
 import './globals.css'
-import { headers } from 'next/headers'
 import { Layout } from '@/components/Layout'
 import { Metadata } from 'next'
-import Script from 'next/script'
+import { ConsentScripts } from '@/components/ConsentScripts'
 import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
@@ -34,31 +33,11 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default async function RootLayout({ children }: RootLayoutProps) {
-  const requestHeaders = await headers()
-  const currentLocale = requestHeaders.get('x-current-locale') || 'en'
-
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang={currentLocale}>
+    <html lang="en">
       <body>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2499950673294937"
-          crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-X4MF66BLMK"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-X4MF66BLMK');
-          `}
-        </Script>
+        <ConsentScripts />
         <Layout>{children}</Layout>
       </body>
     </html>
