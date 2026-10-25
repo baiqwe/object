@@ -121,9 +121,9 @@ const baseIntentPages: IntentPageConfig[] = [
         bulkTitle: 'Build a batch for sketch practice',
         bulkDescription:
           'Generate a longer drawing list when you need warmups for a class, challenge, or daily sketch routine.',
-        seoTitle: 'Random Object To Draw Generator With Visual Cards',
+        seoTitle: 'Random Object Drawing Generator: Find Something To Draw',
         seoDescription:
-          'Generate random things to draw with visual object cards, copyable lists, and focused prompts for sketch practice.',
+          'Find a random object to draw with visual cards and copyable prompt lists for sketch practice, art classes, and daily warmups.',
         landing: {
           introTitle: 'A drawing-focused object generator should help you sketch faster, not slow you down.',
           introBody:
@@ -1606,7 +1606,7 @@ const baseIntentPages: IntentPageConfig[] = [
     i18n: {
       en: {
         heroEyebrow: 'Pictionary prompts',
-        title: 'Random Objects For Pictionary',
+        title: 'Pictionary Objects Generator',
         description:
           'Generate simple, drawable object prompts that work well for Pictionary rounds at home, in class, or during team games.',
         visualTitle: 'Pull a Pictionary-ready object',
@@ -1615,9 +1615,9 @@ const baseIntentPages: IntentPageConfig[] = [
         bulkTitle: 'Build a Pictionary round list',
         bulkDescription:
           'Generate a longer list when you need several rounds for game night, classrooms, or workshop warmups.',
-        seoTitle: 'Random Objects For Pictionary Generator',
+        seoTitle: 'Pictionary Objects Generator: Random Prompts to Draw and Guess',
         seoDescription:
-          'Generate random objects for Pictionary with visual cards, copyable lists, and prompt ideas that are easier to draw and guess.',
+          'Generate Pictionary objects with visual cards and copyable lists of random prompts that are easy to draw and guess.',
         examples: {
           title: 'Pictionary examples chosen for clear silhouettes',
           lead:
@@ -2151,9 +2151,9 @@ const baseIntentPages: IntentPageConfig[] = [
         bulkTitle: 'Make an easy drawing practice list',
         bulkDescription:
           'Create a longer set of easy objects when you need warmups for beginners, classrooms, or a daily sketch routine.',
-        seoTitle: 'Easy Objects To Draw Generator With Visual Prompts',
+        seoTitle: 'Easy Objects To Draw: Random Drawing Ideas for Beginners',
         seoDescription:
-          'Generate easy objects to draw with visual cards, copyable prompt lists, and beginner-friendly ideas for sketch practice.',
+          'Get easy objects to draw with visual cards and copyable prompt lists for beginner sketch practice, classrooms, and daily doodles.',
         examples: {
           title: 'Easy drawing examples with simple forms',
           lead:
@@ -3940,9 +3940,9 @@ const growthIntentSeeds: GrowthIntentSeed[] = [
         bulkTitle: 'Build an animal drawing prompt list',
         bulkDescription:
           'Generate a longer animal list for warmups, art homework, classroom drawing rounds, or a weekly sketch challenge.',
-        seoTitle: 'Random Animal To Draw Generator',
+        seoTitle: 'Random Animal To Draw: Animal Drawing Prompt Generator',
         seoDescription:
-          'Generate random animals to draw with visual cards, copyable animal prompt lists, examples, and FAQ for artists, students, and art teachers.',
+          'Pick a random animal to draw with visual cards, examples, and copyable animal prompt lists for artists, students, and art teachers.',
         exampleTitle: 'Animal drawing prompt examples',
         exampleLead:
           'These examples are recognizable animals with shapes and details that work well for sketching, classroom drawing, and daily prompt lists.',

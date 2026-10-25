@@ -15,7 +15,7 @@ type CategoryPageCopy = {
 const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryPageCopy>>>> = {
   animals: {
     en: {
-      title: 'Random Animal Generator',
+      title: 'Random Animals Generator',
       description:
         'Pick a random animal for drawing prompts, charades, classroom games, story ideas, and quick creative warmups.',
       visualTitle: 'Pick a random animal',
@@ -24,9 +24,9 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
       bulkTitle: 'Build a random animal list',
       bulkDescription:
         'Generate a copyable animal prompt list for lesson plans, game rounds, drawing practice, or writing exercises.',
-      seoTitle: 'Random Animal Generator for Drawing Prompts and Games',
+      seoTitle: 'Random Animals Generator: Drawing Prompts, Games, and Lists',
       seoDescription:
-        'Pick a random animal, use it as an animal prompt generator, or create animal lists for drawing prompts, charades, ESL lessons, and classroom games.',
+        'Pick a random animal or build an animal list for drawing prompts, charades, ESL lessons, classroom games, and creative warmups.',
     },
     zh: {
       title: '随机动物生成器',
@@ -68,9 +68,9 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
       bulkTitle: 'Build a random food list',
       bulkDescription:
         'Generate and copy a food prompt list for worksheets, game cards, menu naming, or drawing practice.',
-      seoTitle: 'Random Food Generator and Food Picker',
+      seoTitle: 'Random Food Generator: Pick Food for Games, Drawing, and Menus',
       seoDescription:
-        'Pick a random food item, use a simple food picker, or generate copyable food lists with visual cards for drawing prompts, ESL games, classrooms, and menu ideas.',
+        'Pick a random food item or generate a visual food list for games, drawing prompts, ESL activities, classroom rounds, and menu ideas.',
     },
     zh: {
       title: '随机食物生成器',
@@ -103,18 +103,18 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
   },
   household: {
     en: {
-      title: 'Random Household Item Generator',
+      title: 'Random Household Items Generator',
       description:
-        'Pick a random household item for charades, vocabulary practice, drawing prompts, memory games, and product brainstorms.',
-      visualTitle: 'Pick a random household item',
+        'Pick random household items and everyday home objects for charades, vocabulary practice, drawing prompts, memory games, and brainstorming.',
+      visualTitle: 'Pick a random household object',
       visualDescription:
         'Generate familiar home objects that are easy to describe, draw, act out, or turn into workshop prompts.',
-      bulkTitle: 'Build a household item list',
+      bulkTitle: 'Build a household objects list',
       bulkDescription:
         'Generate a copyable list of household items for activities, worksheets, games, or brainstorming sessions.',
-      seoTitle: 'Random Household Item Generator',
+      seoTitle: 'Random Household Items Generator With Everyday Home Objects',
       seoDescription:
-        'Pick random household items with visual cards and copyable lists for charades, classroom vocabulary, drawing prompts, and brainstorming.',
+        'Pick random household objects with visual cards and copyable lists for charades, classroom vocabulary, drawing prompts, and brainstorming.',
     },
     zh: {
       title: '随机家居用品生成器',
@@ -143,6 +143,22 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
       seoTitle: 'ランダム日用品ジェネレーター',
       seoDescription:
         'ランダムな日用品をカード形式で表示し、授業、ゲーム、描画、発想出しに使えるリストも作れます。',
+    },
+  },
+  nature: {
+    en: {
+      title: 'Random Nature Generator',
+      description:
+        'Pick a random nature object or prompt for drawing, storytelling, classroom games, creative writing, and quick outdoor-inspired warmups.',
+      visualTitle: 'Pick a random nature prompt',
+      visualDescription:
+        'Use visual cards to find a nature object with a clear shape, texture, or setting cue for your next activity.',
+      bulkTitle: 'Build a random nature list',
+      bulkDescription:
+        'Generate a copyable nature prompt list for drawing practice, lessons, writing exercises, or group games.',
+      seoTitle: 'Random Nature Generator: Nature Objects, Prompts, and Visual Cards',
+      seoDescription:
+        'Generate random nature objects and visual prompts for drawing, storytelling, classroom activities, creative writing, and game rounds.',
     },
   },
 }

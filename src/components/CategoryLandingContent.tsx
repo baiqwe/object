@@ -109,6 +109,50 @@ const categoryPlaybooks: Record<Locale, Record<string, CategoryPlaybook>> = {
         },
       ],
     },
+    household: {
+      title: 'Household object activities that start with a real task',
+      lead:
+        'Everyday home objects work best when the activity gives people a reason to notice shape, function, and context. These formats turn a random household item into a useful prompt rather than a dead-end noun.',
+      cards: [
+        {
+          title: 'Describe without naming it',
+          body: 'Give one player a household object card and ask them to describe its material, purpose, and usual location without saying its name. The group guesses before the timer ends.',
+          bullets: ['Useful for ESL and vocabulary review', 'Works with pairs or larger groups', 'Encourages concrete descriptive language'],
+        },
+        {
+          title: 'Redesign the ordinary',
+          body: 'Generate three objects, then ask each participant to change one feature: make it safer, portable, playful, or useful in a different room.',
+          bullets: ['Good for product-thinking warmups', 'Creates a clear constraint for writers and designers', 'Keeps brainstorming grounded in familiar objects'],
+        },
+        {
+          title: 'Memory tray challenge',
+          body: 'Generate a short list, give the group thirty seconds to study it, then hide the list and ask them to recall the objects in order or by category.',
+          bullets: ['Useful for family games and classrooms', 'Needs no printed materials', 'Makes a batch list more useful than a one-off pick'],
+        },
+      ],
+    },
+    nature: {
+      title: 'Nature prompts with a practical creative angle',
+      lead:
+        'Nature prompts become more useful when they guide observation instead of only naming scenery. These activities make the result useful for drawing, writing, and discussion without pretending that every nature word fits every task.',
+      cards: [
+        {
+          title: 'Texture and light study',
+          body: 'Generate one nature object, then choose a time of day and weather condition. Draw or describe how its texture, shadow, and color would change.',
+          bullets: ['Useful for sketch warmups', 'Gives artists a concrete next decision', 'Works with a single prompt in under ten minutes'],
+        },
+        {
+          title: 'Setting before story',
+          body: 'Use three generated nature objects to establish place, season, and mood before writing a character or plot. Keep each object visible as an environmental detail in the final scene.',
+          bullets: ['Useful for writing groups', 'Prevents vague setting descriptions', 'Turns a random list into a repeatable story exercise'],
+        },
+        {
+          title: 'Sort by evidence',
+          body: 'Generate a batch, then sort every item into something you could observe indoors, outdoors, or only in a particular season. Discuss any item that could reasonably fit more than one group.',
+          bullets: ['Good for classroom discussion', 'Builds observation and comparison skills', 'Lets facilitators review context before using the list'],
+        },
+      ],
+    },
   },
   zh: {
     animals: {
@@ -268,33 +312,33 @@ export function CategoryLandingContent({
   }[locale]
   const trustBlock = {
     en: {
-      title: `How this ${categoryName.toLowerCase()} page stays specific`,
+      title: `What makes a useful ${categoryName.toLowerCase()} prompt`,
       lead:
-        `Category pages work best when they feel genuinely narrower than the homepage. This page keeps a tighter object pool, clear examples, and related links so it can satisfy a more specific search intent without becoming a doorway page.`,
+        `A useful prompt should be recognizable enough to start with and open-ended enough to use in more than one activity. This page keeps the object pool focused, shows real examples, and offers next steps when the task becomes more specific.`,
       bullets: [
-        `Only ${categoryName.toLowerCase()} objects are used on this page.`,
-        'Real image cards make the prompt pool easier to evaluate at a glance.',
-        'Related generators help users move to nearby intents instead of bouncing away.',
+        `Every result comes from the ${categoryName.toLowerCase()} collection used by the generator.`,
+        'Visual cards help visitors judge whether a prompt fits their group, class, or creative task.',
+        'Related pages lead to a narrower activity when one broad prompt is not enough.',
       ],
     },
     zh: {
-      title: `这个 ${categoryName} 页面为什么更具体`,
+      title: `什么样的${categoryName}提示更好用`,
       lead:
-        `分类页只有在真的比首页更聚焦时才有价值。这个页面通过更窄的对象池、直接示例和相关内链，让它更像一个独立可用的落地页，而不是模板页。`,
+        `好用的提示既要足够具体，让人马上能开始；也要留有空间，能被用于不止一种活动。这个页面会保持对象池聚焦、展示真实示例，并在任务更明确时给出合适的下一步。`,
       bullets: [
-        `这个页面只使用 ${categoryName} 相关对象。`,
-        '真实图片卡片让用户更容易判断结果是否合适。',
-        '相关生成器会把用户继续引导到相邻需求，而不是直接流失。',
+        `结果都来自生成器正在使用的${categoryName}对象池。`,
+        '视觉卡片能帮助用户判断题目是否适合当前小组、课堂或创作任务。',
+        '当一个宽泛提示不够用时，相关页面会引导到更具体的活动。',
       ],
     },
     ja: {
-      title: `この ${categoryName} ページが具体的である理由`,
+      title: `使いやすい ${categoryName} のお題とは`,
       lead:
-        `カテゴリページは、トップページより明確に絞られていて初めて価値があります。このページは対象プール、具体例、関連リンクを絞ることで、独立した着地先として機能するようにしています。`,
+        `使いやすいお題は、すぐに想像できる具体性と、複数の活動に展開できる余地の両方を持っています。このページでは対象を絞り、実例を見せ、目的が決まったときの次の選択肢も用意しています。`,
       bullets: [
-        `このページでは ${categoryName} 関連の対象だけを使います。`,
-        '実写カードで結果の雰囲気をすぐ判断できます。',
-        '関連ページへの導線で近い意図へ自然に移動できます。',
+        `結果はすべて、このジェネレーターで使っている ${categoryName} の対象から選ばれます。`,
+        'カード表示で、授業、グループ、創作に合うお題かをすぐ判断できます。',
+        '目的がより具体的な場合は、関連ページから自然に次の活動へ進めます。',
       ],
     },
   }[locale]

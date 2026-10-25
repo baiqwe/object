@@ -4,7 +4,7 @@ import { getCategories, getCategoryPageSlug } from '@/lib/objects'
 import { intentPages } from '@/lib/intent-pages'
 import { siteConfig } from '@/lib/site-config'
 
-const siteLastModified = new Date('2026-07-16T00:00:00.000Z')
+const siteLastModified = new Date('2026-10-25T00:00:00.000Z')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

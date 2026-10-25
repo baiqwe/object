@@ -3,6 +3,7 @@ import { Layout } from '@/components/Layout'
 import { Metadata } from 'next'
 import { ConsentScripts } from '@/components/ConsentScripts'
 import { siteConfig } from '@/lib/site-config'
+import { buildOrganizationJsonLd, buildWebsiteJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
@@ -34,9 +35,20 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const organizationJsonLd = buildOrganizationJsonLd()
+  const websiteJsonLd = buildWebsiteJsonLd()
+
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <ConsentScripts />
         <Layout>{children}</Layout>
       </body>

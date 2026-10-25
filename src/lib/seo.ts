@@ -103,6 +103,28 @@ export function buildSoftwareApplicationJsonLd({
   }
 }
 
+export function buildOrganizationJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: siteConfig.name,
+    url: siteConfig.baseUrl,
+    logo: joinUrl(siteConfig.baseUrl, '/apple-touch-icon.png'),
+    email: siteConfig.contactEmail,
+    sameAs: [siteConfig.repositoryUrl],
+  }
+}
+
+export function buildWebsiteJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteConfig.name,
+    url: siteConfig.baseUrl,
+    inLanguage: ['en', 'zh', 'ja'],
+  }
+}
+
 export function buildFaqJsonLd({
   faqs,
 }: {

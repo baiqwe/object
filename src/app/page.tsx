@@ -7,6 +7,15 @@ import { siteConfig } from '@/lib/site-config'
 import { expandedIntentPageSlugs, getLocalizedIntentLinks } from '@/lib/intent-pages'
 import enDict from '@/dictionaries/en.json'
 
+const homepageIntentPriority = [
+  'random-object-to-draw',
+  'random-animal-to-draw',
+  'random-food-picker',
+  'random-object-games',
+  'random-objects-for-pictionary',
+  'random-object-list-generator',
+]
+
 export const metadata: Metadata = createMetadata({
   locale: 'en',
   title: `${siteConfig.name} With Visual Cards and Copyable Lists`,
@@ -22,6 +31,11 @@ export default function Home() {
     .filter((item): item is NonNullable<typeof item> => Boolean(item))
   const editorialLinks = getLocalizedIntentLinks('en')
     .filter((link) => expandedIntentPageSlugs.includes(link.href.slice(1) as (typeof expandedIntentPageSlugs)[number]))
+    .sort((a, b) => {
+      const aIndex = homepageIntentPriority.indexOf(a.href.slice(1))
+      const bIndex = homepageIntentPriority.indexOf(b.href.slice(1))
+      return (aIndex === -1 ? 99 : aIndex) - (bIndex === -1 ? 99 : bIndex)
+    })
     .map(({ href, title, description }) => ({ href, label: title, description }))
   const quickLinks = editorialLinks.slice(0, 4).map(({ href, label }) => ({ href, label }))
   const trustBlock = {
